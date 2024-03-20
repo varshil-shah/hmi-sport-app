@@ -1,18 +1,21 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Heading, Img, Text } from "../../components";
-import Header1 from "../../components/Header1";
+import Header from "../../components/Header";
 
 export default function LicensePage() {
   return (
     <>
       <Helmet>
         <title>Varshil shah's Application2</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-col items-center justify-start w-full gap-[100px] bg-gray-50_01">
         <div className="flex flex-col items-center justify-start w-full gap-[60px]">
-          <Header1 className="flex justify-center items-center w-full md:h-auto p-[19px] bg-white-A700" />
+          <Header className="flex justify-center items-center w-full md:h-auto p-[19px] bg-white-A700" />
           <div className="flex flex-row justify-start w-full pl-[120px] pr-14 md:px-5">
             <div className="flex flex-col items-center justify-start w-full gap-[60px] mx-auto max-w-[996px]">
               <div className="flex flex-col items-center justify-start w-full gap-10">
@@ -24,13 +27,16 @@ export default function LicensePage() {
                 </div>
                 <Text as="p">
                   <>
-                    Your content remains yours, which means that you retain any intellectual property rights that you
-                    have in your content. For example, you have intellectual property rights in the creative content you
-                    make, such as reviews you write. Or you may have the right to share someone else’s creative content
+                    Your content remains yours, which means that you retain any
+                    intellectual property rights that you have in your content.
+                    For example, you have intellectual property rights in the
+                    creative content you make, such as reviews you write. Or you
+                    may have the right to share someone else’s creative content
                     if they’ve given you their permission.
                     <br />
-                    We need your permission if your intellectual property rights restrict our use of your content. You
-                    provide Google with that permission through this license.
+                    We need your permission if your intellectual property rights
+                    restrict our use of your content. You provide Google with
+                    that permission through this license.
                   </>
                 </Text>
               </div>
@@ -40,7 +46,8 @@ export default function LicensePage() {
                     What’s covered
                   </Heading>
                   <Text as="p">
-                    This license covers your content if that content is protected by intellectual property rights.
+                    This license covers your content if that content is
+                    protected by intellectual property rights.
                   </Text>
                 </div>
                 <div className="flex flex-col items-start justify-start w-full gap-[22px]">
@@ -48,10 +55,12 @@ export default function LicensePage() {
                     What’s not covered
                   </Heading>
                   <Text as="p">
-                    We use cookies to recognize and monitor users, their on-site behavior, and their preferences for
-                    accessing their website. These cookies include the IP and time of visits by visitors. Visitors to
-                    Relasto that do not want cookies put on their browsers should configure their browsers to reject
-                    cookies before using the Relasto website.
+                    We use cookies to recognize and monitor users, their on-site
+                    behavior, and their preferences for accessing their website.
+                    These cookies include the IP and time of visits by visitors.
+                    Visitors to Relasto that do not want cookies put on their
+                    browsers should configure their browsers to reject cookies
+                    before using the Relasto website.
                   </Text>
                 </div>
                 <div className="flex flex-col items-start justify-start w-full pt-0.5 gap-5">
@@ -60,30 +69,41 @@ export default function LicensePage() {
                   </Heading>
                   <Text as="p">
                     <>
-                      We will need to update this policy from time to time to ensure that it remains up-to-date with the
-                      latest legal requirements and any improvements to our privacy management practices.
+                      We will need to update this policy from time to time to
+                      ensure that it remains up-to-date with the latest legal
+                      requirements and any improvements to our privacy
+                      management practices.
                       <br />
-                      When we change the policy, we will make sure that we inform you, if any, of such changes. A copy
-                      of this policy’s latest version will always be available at this page.
+                      When we change the policy, we will make sure that we
+                      inform you, if any, of such changes. A copy of this
+                      policy’s latest version will always be available at this
+                      page.
                     </>
                   </Text>
                 </div>
                 <div className="flex flex-col items-start justify-center w-full gap-8">
-                  <Heading size="2xl" as="h5" className="mt-px tracking-[-0.48px]">
+                  <Heading
+                    size="2xl"
+                    as="h5"
+                    className="mt-px tracking-[-0.48px]"
+                  >
                     Refund Policy
                   </Heading>
                   <Text as="p">
-                    But why fast loading is important? According to Neil Patel, 47% of people on the internet expect a
-                    web page to load in less than 2 seconds.
+                    But why fast loading is important? According to Neil Patel,
+                    47% of people on the internet expect a web page to load in
+                    less than 2 seconds.
                   </Text>
                   <Text as="p">
-                    Static websites are way faster than dynamic ones. As they don’t have a back-end system, there is no
-                    time loss due to database connection. Instead, the lightweight, pre-rendered HTML files load
-                    incredibly fast.
+                    Static websites are way faster than dynamic ones. As they
+                    don’t have a back-end system, there is no time loss due to
+                    database connection. Instead, the lightweight, pre-rendered
+                    HTML files load incredibly fast.
                   </Text>
                   <Text as="p">
-                    You may not disclose any information about your order including, but not limited to, Order ID,
-                    download connection, etc.
+                    You may not disclose any information about your order
+                    including, but not limited to, Order ID, download
+                    connection, etc.
                   </Text>
                 </div>
               </div>
@@ -94,8 +114,16 @@ export default function LicensePage() {
           <div className="flex flex-row md:flex-col justify-start items-center w-full mt-[5px] gap-px mx-auto md:gap-5 max-w-[1200px]">
             <div className="flex flex-col items-center justify-start w-[29%] md:w-full gap-[43px]">
               <div className="flex flex-row justify-start items-start w-full gap-[11px]">
-                <Img src="images/img_real_estate_1.svg" alt="realestateone" className="h-[40px] w-[40px]" />
-                <Text size="lg" as="p" className="mt-[5px] !text-orange-A700 !font-markoone">
+                <Img
+                  src="images/img_real_estate_1.svg"
+                  alt="realestateone"
+                  className="h-[40px] w-[40px]"
+                />
+                <Text
+                  size="lg"
+                  as="p"
+                  className="mt-[5px] !text-orange-A700 !font-markoone"
+                >
                   Relasto
                 </Text>
               </div>
@@ -114,14 +142,34 @@ export default function LicensePage() {
                   <Heading as="h6">info@mail.com</Heading>
                 </div>
                 <div className="flex flex-row justify-start w-full gap-3">
-                  <Img src="images/img_icon_facebook.svg" alt="iconfacebook" className="h-[30px] w-[30px]" />
+                  <Img
+                    src="images/img_icon_facebook.svg"
+                    alt="iconfacebook"
+                    className="h-[30px] w-[30px]"
+                  />
                   <div className="flex flex-col items-center justify-start h-[30px] w-[30px]">
-                    <Img src="images/img_icon_twitter.svg" alt="icontwitter_one" className="h-[30px] w-[30px]" />
+                    <Img
+                      src="images/img_icon_twitter.svg"
+                      alt="icontwitter_one"
+                      className="h-[30px] w-[30px]"
+                    />
                   </div>
-                  <Img src="images/img_icon_instragram.svg" alt="iconinstragram" className="h-[30px] w-[30px]" />
-                  <Img src="images/img_icon_linked_in.svg" alt="iconlinkedin" className="h-[30px] w-[30px]" />
+                  <Img
+                    src="images/img_icon_instragram.svg"
+                    alt="iconinstragram"
+                    className="h-[30px] w-[30px]"
+                  />
+                  <Img
+                    src="images/img_icon_linked_in.svg"
+                    alt="iconlinkedin"
+                    className="h-[30px] w-[30px]"
+                  />
                   <div className="flex flex-col items-center justify-start h-[30px] w-[30px]">
-                    <Img src="images/img_icon_youtube.svg" alt="iconyoutube_one" className="h-[30px] w-[30px]" />
+                    <Img
+                      src="images/img_icon_youtube.svg"
+                      alt="iconyoutube_one"
+                      className="h-[30px] w-[30px]"
+                    />
                   </div>
                 </div>
               </div>

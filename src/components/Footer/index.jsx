@@ -7,9 +7,17 @@ export default function Footer({ ...props }) {
       <div className="flex flex-row md:flex-col justify-start items-center w-full mt-[5px] gap-px mx-auto md:gap-5 md:px-5 max-w-[1200px]">
         <div className="flex flex-col items-center justify-start w-[29%] md:w-full gap-[43px]">
           <div className="flex flex-row justify-start items-start w-full gap-[11px]">
-            <Img src="images/img_real_estate_1.svg" alt="realestateone" className="h-[40px] w-[40px]" />
-            <Text size="lg" as="p" className="mt-[5px] !text-orange-A700 !font-markoone">
-              Relasto
+            <Img
+              src="images/sport_name.png"
+              alt="realestateone"
+              className="h-[40px] w-[40px]"
+            />
+            <Text
+              size="lg"
+              as="p"
+              className="mt-[5px] !text-orange-A700 !font-markoone"
+            >
+              SportsSpark
             </Text>
           </div>
           <div className="flex flex-col items-start justify-start w-full gap-7">
@@ -28,15 +36,35 @@ export default function Footer({ ...props }) {
             </div>
             <div className="flex flex-row justify-start w-full gap-3">
               <div className="flex flex-col items-center justify-start h-[30px] w-[30px]">
-                <Img src="images/img_icon_facebook.svg" alt="iconfacebook" className="h-[30px] w-[30px]" />
+                <Img
+                  src="images/img_icon_facebook.svg"
+                  alt="iconfacebook"
+                  className="h-[30px] w-[30px]"
+                />
               </div>
               <div className="flex flex-col items-center justify-start h-[30px] w-[30px]">
-                <Img src="images/img_icon_twitter.svg" alt="icontwitter_one" className="h-[30px] w-[30px]" />
+                <Img
+                  src="images/img_icon_twitter.svg"
+                  alt="icontwitter_one"
+                  className="h-[30px] w-[30px]"
+                />
               </div>
-              <Img src="images/img_icon_instragram.svg" alt="iconinstragram" className="h-[30px] w-[30px]" />
-              <Img src="images/img_icon_linked_in.svg" alt="iconlinkedin" className="h-[30px] w-[30px]" />
+              <Img
+                src="images/img_icon_instragram.svg"
+                alt="iconinstragram"
+                className="h-[30px] w-[30px]"
+              />
+              <Img
+                src="images/img_icon_linked_in.svg"
+                alt="iconlinkedin"
+                className="h-[30px] w-[30px]"
+              />
               <div className="flex flex-col items-center justify-start h-[30px] w-[30px]">
-                <Img src="images/img_icon_youtube.svg" alt="iconyoutube_one" className="h-[30px] w-[30px]" />
+                <Img
+                  src="images/img_icon_youtube.svg"
+                  alt="iconyoutube_one"
+                  className="h-[30px] w-[30px]"
+                />
               </div>
             </div>
           </div>

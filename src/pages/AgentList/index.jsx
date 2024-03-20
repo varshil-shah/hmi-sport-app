@@ -1,9 +1,16 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { CloseSVG } from "../../assets/images";
-import { Button, Img, Heading, RatingBar, SelectBox, Input } from "../../components";
+import {
+  Button,
+  Img,
+  Heading,
+  RatingBar,
+  SelectBox,
+  Input,
+} from "../../components";
 import Footer from "../../components/Footer";
-import Header1 from "../../components/Header1";
+import Header from "../../components/Header";
 
 const dropDownOptions = [
   { label: "Option1", value: "option1" },
@@ -18,11 +25,14 @@ export default function AgentListPage() {
     <>
       <Helmet>
         <title>Varshil shah's Application2</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-col items-center justify-start w-full gap-[100px] overflow-auto bg-gray-50_01">
         <div className="flex flex-col items-center justify-start w-full gap-14">
-          <Header1 className="flex justify-center items-center w-full md:h-auto p-[19px] bg-white-A700" />
+          <Header className="flex justify-center items-center w-full md:h-auto p-[19px] bg-white-A700" />
           <div className="flex flex-row justify-center w-full">
             <div className="flex flex-col items-start justify-start w-full pt-[5px] gap-[18px] md:px-5 max-w-[1200px]">
               <Heading size="4xl" as="h1" className="tracking-[-0.72px]">
@@ -37,7 +47,12 @@ export default function AgentListPage() {
                   onChange={(e) => setSearchBarValue10(e)}
                   suffix={
                     searchBarValue10?.length > 0 ? (
-                      <CloseSVG onClick={() => setSearchBarValue10("")} height={24} width={24} fillColor="#6e6e6eff" />
+                      <CloseSVG
+                        onClick={() => setSearchBarValue10("")}
+                        height={24}
+                        width={24}
+                        fillColor="#6e6e6eff"
+                      />
                     ) : (
                       <Img
                         src="images/img_icon_24px_search_gray_600_02.svg"
@@ -50,7 +65,12 @@ export default function AgentListPage() {
                 />
                 <SelectBox
                   shape="round"
-                  indicator={<Img src="images/img_arrowdown_gray_600_02.svg" alt="arrow_down" />}
+                  indicator={
+                    <Img
+                      src="images/img_arrowdown_gray_600_02.svg"
+                      alt="arrow_down"
+                    />
+                  }
                   name="active"
                   placeholder="Review"
                   options={dropDownOptions}
@@ -59,7 +79,12 @@ export default function AgentListPage() {
                 <Button
                   size="4xl"
                   shape="round"
-                  rightIcon={<Img src="images/img_icon_20px_search.svg" alt="icon / 20px / search" />}
+                  rightIcon={
+                    <Img
+                      src="images/img_icon_20px_search.svg"
+                      alt="icon / 20px / search"
+                    />
+                  }
                   className="gap-2.5 font-bold min-w-[128px]"
                 >
                   Search
@@ -81,7 +106,12 @@ export default function AgentListPage() {
                       Bruno Fernandes
                     </Heading>
                     <div className="flex flex-row justify-start items-center gap-3.5 py-0.5">
-                      <RatingBar value={1} isEditable={true} size={16} className="flex justify-between" />
+                      <RatingBar
+                        value={1}
+                        isEditable={true}
+                        size={16}
+                        className="flex justify-between"
+                      />
                       <Heading as="h3">4.5 review</Heading>
                     </div>
                     <Button
@@ -107,7 +137,12 @@ export default function AgentListPage() {
                       Bruno Fernandes
                     </Heading>
                     <div className="flex flex-row justify-start items-center gap-3.5 py-0.5">
-                      <RatingBar value={1} isEditable={true} size={16} className="flex justify-between" />
+                      <RatingBar
+                        value={1}
+                        isEditable={true}
+                        size={16}
+                        className="flex justify-between"
+                      />
                       <Heading as="h5">4.5 review</Heading>
                     </div>
                     <Button
@@ -133,7 +168,12 @@ export default function AgentListPage() {
                       Bruno Fernandes
                     </Heading>
                     <div className="flex flex-row justify-start items-center gap-3.5 py-0.5">
-                      <RatingBar value={1} isEditable={true} size={16} className="flex justify-between" />
+                      <RatingBar
+                        value={1}
+                        isEditable={true}
+                        size={16}
+                        className="flex justify-between"
+                      />
                       <Heading as="h6">4.5 review</Heading>
                     </div>
                     <Button
@@ -159,7 +199,12 @@ export default function AgentListPage() {
                       Bruno Fernandes
                     </Heading>
                     <div className="flex flex-row justify-start items-center gap-3.5 py-0.5">
-                      <RatingBar value={1} isEditable={true} size={16} className="flex justify-between" />
+                      <RatingBar
+                        value={1}
+                        isEditable={true}
+                        size={16}
+                        className="flex justify-between"
+                      />
                       <Heading as="h6">4.5 review</Heading>
                     </div>
                     <Button
@@ -185,7 +230,12 @@ export default function AgentListPage() {
                       Bruno Fernandes
                     </Heading>
                     <div className="flex flex-row justify-start items-center gap-3.5 py-0.5">
-                      <RatingBar value={1} isEditable={true} size={16} className="flex justify-between" />
+                      <RatingBar
+                        value={1}
+                        isEditable={true}
+                        size={16}
+                        className="flex justify-between"
+                      />
                       <Heading as="h6">4.5 review</Heading>
                     </div>
                     <Button
@@ -211,7 +261,12 @@ export default function AgentListPage() {
                       Bruno Fernandes
                     </Heading>
                     <div className="flex flex-row justify-start items-center gap-3.5 py-0.5">
-                      <RatingBar value={1} isEditable={true} size={16} className="flex justify-between" />
+                      <RatingBar
+                        value={1}
+                        isEditable={true}
+                        size={16}
+                        className="flex justify-between"
+                      />
                       <Heading as="h6">4.5 review</Heading>
                     </div>
                     <Button
@@ -237,7 +292,12 @@ export default function AgentListPage() {
                       Bruno Fernandes
                     </Heading>
                     <div className="flex flex-row justify-start items-center gap-3.5 py-0.5">
-                      <RatingBar value={1} isEditable={true} size={16} className="flex justify-between" />
+                      <RatingBar
+                        value={1}
+                        isEditable={true}
+                        size={16}
+                        className="flex justify-between"
+                      />
                       <Heading as="h6">4.5 review</Heading>
                     </div>
                     <Button
@@ -263,7 +323,12 @@ export default function AgentListPage() {
                       Bruno Fernandes
                     </Heading>
                     <div className="flex flex-row justify-start items-center gap-3.5 py-0.5">
-                      <RatingBar value={1} isEditable={true} size={16} className="flex justify-between" />
+                      <RatingBar
+                        value={1}
+                        isEditable={true}
+                        size={16}
+                        className="flex justify-between"
+                      />
                       <Heading as="h6">4.5 review</Heading>
                     </div>
                     <Button
@@ -289,7 +354,12 @@ export default function AgentListPage() {
                       Bruno Fernandes
                     </Heading>
                     <div className="flex flex-row justify-start items-center gap-3.5 py-0.5">
-                      <RatingBar value={1} isEditable={true} size={16} className="flex justify-between" />
+                      <RatingBar
+                        value={1}
+                        isEditable={true}
+                        size={16}
+                        className="flex justify-between"
+                      />
                       <Heading as="h6">4.5 review</Heading>
                     </div>
                     <Button
@@ -315,7 +385,12 @@ export default function AgentListPage() {
                       Bruno Fernandes
                     </Heading>
                     <div className="flex flex-row justify-start items-center gap-3.5 py-0.5">
-                      <RatingBar value={1} isEditable={true} size={16} className="flex justify-between" />
+                      <RatingBar
+                        value={1}
+                        isEditable={true}
+                        size={16}
+                        className="flex justify-between"
+                      />
                       <Heading as="h6">4.5 review</Heading>
                     </div>
                     <Button
@@ -341,7 +416,12 @@ export default function AgentListPage() {
                       Bruno Fernandes
                     </Heading>
                     <div className="flex flex-row justify-start items-center gap-3.5 py-0.5">
-                      <RatingBar value={1} isEditable={true} size={16} className="flex justify-between" />
+                      <RatingBar
+                        value={1}
+                        isEditable={true}
+                        size={16}
+                        className="flex justify-between"
+                      />
                       <Heading as="h6">4.5 review</Heading>
                     </div>
                     <Button
@@ -367,7 +447,12 @@ export default function AgentListPage() {
                       Bruno Fernandes
                     </Heading>
                     <div className="flex flex-row justify-start items-center gap-3.5 py-0.5">
-                      <RatingBar value={1} isEditable={true} size={16} className="flex justify-between" />
+                      <RatingBar
+                        value={1}
+                        isEditable={true}
+                        size={16}
+                        className="flex justify-between"
+                      />
                       <Heading as="h6">4.5 review</Heading>
                     </div>
                     <Button
@@ -384,19 +469,44 @@ export default function AgentListPage() {
             </div>
             <div className="flex flex-row sm:flex-col justify-between w-full md:px-5 sm:gap-10 max-w-[1200px]">
               <div className="flex flex-row justify-start gap-[5px]">
-                <Button color="gray_700" variant="outline" shape="round" className="font-semibold min-w-[48px]">
+                <Button
+                  color="gray_700"
+                  variant="outline"
+                  shape="round"
+                  className="font-semibold min-w-[48px]"
+                >
                   1
                 </Button>
-                <Button color="blue_gray_100_02" variant="outline" shape="round" className="font-semibold min-w-[48px]">
+                <Button
+                  color="blue_gray_100_02"
+                  variant="outline"
+                  shape="round"
+                  className="font-semibold min-w-[48px]"
+                >
                   2
                 </Button>
-                <Button color="blue_gray_100_02" variant="outline" shape="round" className="font-semibold min-w-[48px]">
+                <Button
+                  color="blue_gray_100_02"
+                  variant="outline"
+                  shape="round"
+                  className="font-semibold min-w-[48px]"
+                >
                   3
                 </Button>
-                <Button color="blue_gray_100_02" variant="outline" shape="round" className="font-semibold min-w-[48px]">
+                <Button
+                  color="blue_gray_100_02"
+                  variant="outline"
+                  shape="round"
+                  className="font-semibold min-w-[48px]"
+                >
                   4
                 </Button>
-                <Button color="blue_gray_100_02" variant="outline" shape="round" className="font-semibold min-w-[48px]">
+                <Button
+                  color="blue_gray_100_02"
+                  variant="outline"
+                  shape="round"
+                  className="font-semibold min-w-[48px]"
+                >
                   5
                 </Button>
               </div>
@@ -404,7 +514,12 @@ export default function AgentListPage() {
                 color="blue_gray_100_02"
                 variant="outline"
                 shape="round"
-                rightIcon={<Img src="images/img_icon_16px_arrow_right.svg" alt="icon / 16px / arrow - right" />}
+                rightIcon={
+                  <Img
+                    src="images/img_icon_16px_arrow_right.svg"
+                    alt="icon / 16px / arrow - right"
+                  />
+                }
                 className="gap-1 font-semibold min-w-[134px]"
               >
                 Next Page

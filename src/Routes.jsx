@@ -31,7 +31,7 @@ const ProjectRoutes = () => {
     },
     {
       path: "listing",
-      element: <Listing />,
+      element: <ListingMapView />,
     },
     {
       path: "listingmapview",

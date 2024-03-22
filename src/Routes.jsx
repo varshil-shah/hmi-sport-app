@@ -20,7 +20,7 @@ import License from "pages/License";
 const ProjectRoutes = () => {
   let element = useRoutes([
     { path: "dhiwise-dashboard", element: <Home /> },
-    { path: "*", element: <NotFound /> },
+    { path: "*", element: <Error /> },
     {
       path: "/",
       element: <LandingPage />,

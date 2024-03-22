@@ -4,7 +4,12 @@ import { default as ModalProvider } from "react-modal";
 
 export default function CreateAccount({ isOpen, ...props }) {
   return (
-    <ModalProvider {...props} appElement={document.getElementById("root")} isOpen={isOpen} className="min-w-[680px]">
+    <ModalProvider
+      {...props}
+      appElement={document.getElementById("root")}
+      isOpen={isOpen}
+      className="min-w-[680px]"
+    >
       <div className="flex flex-row justify-center w-full p-[29px] sm:p-5 border-blue_gray-100_01 border border-solid bg-white-A700 rounded-[10px]">
         <div className="flex flex-col items-center justify-start w-full mt-2.5 mb-[7px] gap-[29px]">
           <div className="flex flex-col items-start justify-start w-full gap-[15px]">
@@ -24,7 +29,12 @@ export default function CreateAccount({ isOpen, ...props }) {
                     type="email"
                     name="email"
                     placeholder="user / email address"
-                    prefix={<Img src="images/img_icon_24px_user.svg" alt="icon / 24px / user" />}
+                    prefix={
+                      <Img
+                        src="images/img_icon_24px_user.svg"
+                        alt="icon / 24px / user"
+                      />
+                    }
                     className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
                   />
                   <Input
@@ -32,8 +42,18 @@ export default function CreateAccount({ isOpen, ...props }) {
                     type="password"
                     name="password"
                     placeholder="Password"
-                    prefix={<Img src="images/img_icon_20px_lock.svg" alt="icon / 20px / lock " />}
-                    suffix={<Img src="images/img_icon_20px_eyehide.svg" alt="icon / 20px / eye-hide" />}
+                    prefix={
+                      <Img
+                        src="images/img_icon_20px_lock.svg"
+                        alt="icon / 20px / lock "
+                      />
+                    }
+                    suffix={
+                      <Img
+                        src="images/img_icon_20px_eyehide.svg"
+                        alt="icon / 20px / eye-hide"
+                      />
+                    }
                     className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
                   />
                 </div>
@@ -43,7 +63,12 @@ export default function CreateAccount({ isOpen, ...props }) {
                     type="email"
                     name="email"
                     placeholder="user / email address"
-                    prefix={<Img src="images/img_icon_24px_user.svg" alt="icon / 24px / user" />}
+                    prefix={
+                      <Img
+                        src="images/img_icon_24px_user.svg"
+                        alt="icon / 24px / user"
+                      />
+                    }
                     className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
                   />
                   <Input
@@ -51,8 +76,18 @@ export default function CreateAccount({ isOpen, ...props }) {
                     type="password"
                     name="password"
                     placeholder="Password"
-                    prefix={<Img src="images/img_icon_20px_lock.svg" alt="icon / 20px / lock " />}
-                    suffix={<Img src="images/img_icon_20px_eyehide.svg" alt="icon / 20px / eye-hide" />}
+                    prefix={
+                      <Img
+                        src="images/img_icon_20px_lock.svg"
+                        alt="icon / 20px / lock "
+                      />
+                    }
+                    suffix={
+                      <Img
+                        src="images/img_icon_20px_eyehide.svg"
+                        alt="icon / 20px / eye-hide"
+                      />
+                    }
                     className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
                   />
                 </div>
@@ -67,14 +102,23 @@ export default function CreateAccount({ isOpen, ...props }) {
             />
           </div>
           <div className="flex flex-col items-center justify-start w-full gap-[18px]">
-            <Button size="4xl" shape="round" className="w-full sm:px-5 font-bold">
+            <Button
+              size="4xl"
+              shape="round"
+              className="w-full sm:px-5 font-bold"
+            >
               Create Account
             </Button>
             <Button
               color="white_A700"
               size="4xl"
               shape="round"
-              leftIcon={<Img src="images/img_icon_20px_google.svg" alt="icon / 20px / google" />}
+              leftIcon={
+                <Img
+                  src="images/img_icon_20px_google.svg"
+                  alt="icon / 20px / google"
+                />
+              }
               className="w-full gap-2.5 sm:px-5 text-gray-900 font-bold border-gray-600_02 border border-solid"
             >
               Create Account with Google
@@ -83,7 +127,11 @@ export default function CreateAccount({ isOpen, ...props }) {
           <div className="h-px w-full bg-blue_gray-100_01" />
           <div className="flex flex-row md:flex-col justify-center w-full gap-2">
             <a href="#" className="mb-px ml-[196px] md:ml-5">
-              <Heading size="lg" as="h2" className="!text-gray-600_02 tracking-[-0.40px] text-center">
+              <Heading
+                size="lg"
+                as="h2"
+                className="!text-gray-600_02 tracking-[-0.40px] text-center"
+              >
                 Have an account?
               </Heading>
             </a>

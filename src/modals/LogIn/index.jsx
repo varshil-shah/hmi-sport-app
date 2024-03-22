@@ -2,7 +2,7 @@ import React from "react";
 import { Heading, Button, Img, CheckBox, Input } from "../../components";
 import { default as ModalProvider } from "react-modal";
 
-export default function LogIn({ isOpen, ...props }) {
+export default function LogIn({ isOpen, onClose, ...props }) {
   return (
     <ModalProvider
       {...props}
@@ -19,7 +19,12 @@ export default function LogIn({ isOpen, ...props }) {
                   <Heading size="4xl" as="h1" className="tracking-[-0.72px]">
                     Log in
                   </Heading>
-                  <Button size="sm" shape="square" className="w-[30px] mt-1">
+                  <Button
+                    size="sm"
+                    shape="square"
+                    className="w-[30px] mt-1"
+                    onClick={onClose}
+                  >
                     <Img src="images/img_frame_1000001678.svg" />
                   </Button>
                 </div>

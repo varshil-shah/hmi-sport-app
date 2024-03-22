@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Text, Heading, Input, Img } from "../../components";
-import Header2 from "../../components/Header2";
+import Header from "../../components/Header";
 
 export default function FAQPage() {
   const [searchBarValue23, setSearchBarValue23] = React.useState("");
@@ -10,14 +10,21 @@ export default function FAQPage() {
     <>
       <Helmet>
         <title>Varshil shah's Application2</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-col items-center justify-center w-full md:h-auto pb-64 gap-[68px] md:pb-5 bg-gray-50_01">
-        <Header2 className="flex justify-center items-center w-full md:h-auto p-[19px] bg-white-A700" />
+        <Header className="flex justify-center items-center w-full md:h-auto p-[19px] bg-white-A700" />
         <div className="flex flex-row justify-center w-full">
           <div className="flex flex-row justify-center w-full">
             <div className="flex flex-col items-center justify-start w-full pt-[7px] gap-[33px] md:px-5 max-w-[1200px]">
-              <Heading size="5xl" as="h1" className="tracking-[-0.92px] text-center">
+              <Heading
+                size="5xl"
+                as="h1"
+                className="tracking-[-0.92px] text-center"
+              >
                 Search Property / Anything
               </Heading>
               <div className="flex flex-col items-center justify-start w-full gap-[25px]">
@@ -52,29 +59,36 @@ export default function FAQPage() {
                       You&#39;re viewing sample results.
                     </Heading>
                     <div className="flex flex-col items-start justify-start w-full gap-1">
-                      <a href="https://relasto.com" target="_blank" rel="noreferrer">
+                      <a
+                        href="https://relasto.com"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <Heading as="h3" className="!text-gray-600_02">
                           https://relasto.com
                         </Heading>
                       </a>
                       <Text size="xs" as="p">
-                        Ipsum sunt incidunt veniam sint nemo et aut. Vero ut quibusdam autem suscipit culpa
-                        perspiciatis. Exercitationem dolorum dolore perferendis praesen…
+                        Ipsum sunt incidunt veniam sint nemo et aut. Vero ut
+                        quibusdam autem suscipit culpa perspiciatis.
+                        Exercitationem dolorum dolore perferendis praesen…
                       </Text>
                     </div>
                   </div>
                   <div className="flex flex-col w-full gap-10 md:gap-2.5">
                     <div className="flex flex-col items-start justify-start w-full pt-[3px] gap-[11px]">
                       <Heading size="lg" as="h4" className="tracking-[-0.40px]">
-                        Add CMS or Business Hosting and index your site to see real search results!
+                        Add CMS or Business Hosting and index your site to see
+                        real search results!
                       </Heading>
                       <div className="flex flex-col items-start justify-start w-full gap-[7px]">
                         <Heading as="h5" className="!text-gray-600_02">
                           https://relasto.com
                         </Heading>
                         <Text size="xs" as="p">
-                          Ipsum sunt incidunt veniam sint nemo et aut. Vero ut quibusdam autem suscipit culpa
-                          perspiciatis. Exercitationem dolorum dolore perferendis praesen…
+                          Ipsum sunt incidunt veniam sint nemo et aut. Vero ut
+                          quibusdam autem suscipit culpa perspiciatis.
+                          Exercitationem dolorum dolore perferendis praesen…
                         </Text>
                       </div>
                     </div>
@@ -88,8 +102,9 @@ export default function FAQPage() {
                           https://relasto.com
                         </Heading>
                         <Text size="xs" as="p">
-                          Ipsum sunt incidunt veniam sint nemo et aut. Vero ut quibusdam autem suscipit culpa
-                          perspiciatis. Exercitationem dolorum dolore perferendis praesen…
+                          Ipsum sunt incidunt veniam sint nemo et aut. Vero ut
+                          quibusdam autem suscipit culpa perspiciatis.
+                          Exercitationem dolorum dolore perferendis praesen…
                         </Text>
                       </div>
                     </div>

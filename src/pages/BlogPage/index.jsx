@@ -4,7 +4,7 @@ import { CloseSVG } from "../../assets/images";
 import { Button, Img, Heading, SelectBox, Input } from "../../components";
 import BlogPageColumnactive from "../../components/BlogPageColumnactive";
 import Footer from "../../components/Footer";
-import Header1 from "../../components/Header1";
+import Header from "../../components/Header";
 
 const dropDownOptions = [
   { label: "Option1", value: "option1" },
@@ -19,11 +19,14 @@ export default function BlogPagePage() {
     <>
       <Helmet>
         <title>Varshil shah's Application2</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-col items-center justify-start w-full overflow-auto bg-gray-50_01">
         <div className="flex flex-col items-center justify-start w-full gap-[68px]">
-          <Header1 className="flex justify-center items-center w-full md:h-auto p-[19px] bg-white-A700" />
+          <Header className="flex justify-center items-center w-full md:h-auto p-[19px] bg-white-A700" />
           <div className="flex flex-col items-center justify-start w-full">
             <div className="flex flex-col items-center justify-start w-full gap-[58px] md:px-5 max-w-[1200px]">
               <div className="flex flex-col items-start justify-start w-full pt-[5px] gap-[18px]">
@@ -57,7 +60,12 @@ export default function BlogPagePage() {
                   />
                   <SelectBox
                     shape="round"
-                    indicator={<Img src="images/img_arrowdown_gray_600_02.svg" alt="arrow_down" />}
+                    indicator={
+                      <Img
+                        src="images/img_arrowdown_gray_600_02.svg"
+                        alt="arrow_down"
+                      />
+                    }
                     name="active"
                     placeholder="Category"
                     options={dropDownOptions}
@@ -65,7 +73,12 @@ export default function BlogPagePage() {
                   />
                   <SelectBox
                     shape="round"
-                    indicator={<Img src="images/img_arrowdown_gray_600_02.svg" alt="arrow_down" />}
+                    indicator={
+                      <Img
+                        src="images/img_arrowdown_gray_600_02.svg"
+                        alt="arrow_down"
+                      />
+                    }
                     name="active_one"
                     placeholder="Popular"
                     options={dropDownOptions}
@@ -93,19 +106,31 @@ export default function BlogPagePage() {
                           Business
                         </Button>
                         <div className="flex flex-col items-center justify-start w-full gap-[15px]">
-                          <Heading size="2xl" as="h2" className="tracking-[-0.48px]">
+                          <Heading
+                            size="2xl"
+                            as="h2"
+                            className="tracking-[-0.48px]"
+                          >
                             10 Delightful Dining Room Decor Trends for Spring
                           </Heading>
                           <div className="flex flex-row justify-start w-full gap-6">
                             <div className="flex flex-row justify-start items-start w-[23%] gap-1.5">
                               <div className="h-[5px] w-[5px] mt-[5px] bg-blue_gray-100_01 rounded-sm" />
-                              <Heading size="xs" as="h3" className="!text-gray-600_02">
+                              <Heading
+                                size="xs"
+                                as="h3"
+                                className="!text-gray-600_02"
+                              >
                                 July 20, 2022
                               </Heading>
                             </div>
                             <div className="flex flex-row justify-start items-center w-[23%] gap-1.5">
                               <div className="h-[5px] w-[5px] bg-blue_gray-100_01 rounded-sm" />
-                              <Heading size="xs" as="h4" className="!text-gray-600_02">
+                              <Heading
+                                size="xs"
+                                as="h4"
+                                className="!text-gray-600_02"
+                              >
                                 7 min read
                               </Heading>
                             </div>
@@ -114,10 +139,18 @@ export default function BlogPagePage() {
                       </div>
                     </div>
                     <div className="flex flex-row justify-start items-center w-full gap-2">
-                      <Heading size="md" as="h5" className="mt-0.5 !text-gray-600_02 !font-bold">
+                      <Heading
+                        size="md"
+                        as="h5"
+                        className="mt-0.5 !text-gray-600_02 !font-bold"
+                      >
                         Continue Reading
                       </Heading>
-                      <Img src="images/img_icon_24px_v_gray_600_02.svg" alt="continue" className="h-[24px] w-[24px]" />
+                      <Img
+                        src="images/img_icon_24px_v_gray_600_02.svg"
+                        alt="continue"
+                        className="h-[24px] w-[24px]"
+                      />
                     </div>
                   </div>
                   <BlogPageColumnactive className="flex flex-col items-center justify-start w-full gap-6" />
@@ -132,7 +165,12 @@ export default function BlogPagePage() {
               </div>
               <div className="flex flex-row sm:flex-col justify-between w-full sm:gap-10">
                 <div className="flex flex-row justify-start gap-[5px]">
-                  <Button color="gray_700" variant="outline" shape="round" className="font-semibold min-w-[48px]">
+                  <Button
+                    color="gray_700"
+                    variant="outline"
+                    shape="round"
+                    className="font-semibold min-w-[48px]"
+                  >
                     1
                   </Button>
                   <Button
@@ -172,7 +210,12 @@ export default function BlogPagePage() {
                   color="blue_gray_100_02"
                   variant="outline"
                   shape="round"
-                  rightIcon={<Img src="images/img_icon_16px_arrow_right.svg" alt="icon / 16px / arrow - right" />}
+                  rightIcon={
+                    <Img
+                      src="images/img_icon_16px_arrow_right.svg"
+                      alt="icon / 16px / arrow - right"
+                    />
+                  }
                   className="gap-1 font-semibold min-w-[134px]"
                 >
                   Next Page

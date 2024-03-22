@@ -2,9 +2,26 @@ import React from "react";
 import { CloseSVG } from "../../assets/images";
 import { Button, Input, Img, Heading, Text } from "./..";
 import { Link } from "react-router-dom";
+import LogIn from "modals/LogIn";
+import CreateAccount from "modals/CreateAccount";
 
 export default function Header({ ...props }) {
   const [searchBarValue1, setSearchBarValue1] = React.useState("");
+  const [showLoginModal, setShowLoginModal] = React.useState(false);
+  const [showSignUpModal, setShowSignUpModal] = React.useState(false);
+
+  function hideLoginModal() {
+    setShowLoginModal(false);
+  }
+
+  function closeSignUpModal() {
+    setShowSignUpModal(false);
+  }
+
+  function openSignUpModal() {
+    hideLoginModal();
+    setShowSignUpModal(true);
+  }
 
   return (
     <header {...props}>
@@ -36,13 +53,12 @@ export default function Header({ ...props }) {
               </Heading>
             </div>
             <div className="flex flex-row justify-start items-start w-[25%] gap-1.5">
-              <Heading as="h6">Agents</Heading>
+              <Heading as="h6">Sports</Heading>
+            </div>
+            <div className="flex flex-row justify-start items-start w-[25%] gap-1.5">
+              <Heading as="h6">Organisers</Heading>
             </div>
           </div>
-          <Heading as="h6" className="text-center">
-            Property
-          </Heading>
-          <Heading as="h6">Blog</Heading>
         </div>
         <div className="flex flex-row justify-start items-center w-[19%] md:w-full gap-2.5">
           <Input
@@ -75,11 +91,14 @@ export default function Header({ ...props }) {
             size="lg"
             shape="round"
             className="sm:px-5 font-semibold min-w-[94px]"
+            onClick={() => setShowLoginModal((prevValue) => !prevValue)}
           >
             Log in
           </Button>
         </div>
       </div>
+
+      <LogIn isOpen={showLoginModal} onClose={hideLoginModal} />
     </header>
   );
 }

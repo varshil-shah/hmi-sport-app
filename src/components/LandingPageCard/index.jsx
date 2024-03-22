@@ -1,5 +1,6 @@
 import React from "react";
 import { Heading, Button, Img } from "./..";
+import { Link } from "react-router-dom";
 
 export default function LandingPageCard({
   banner = "images/img_image_260x384.png",
@@ -75,9 +76,12 @@ export default function LandingPageCard({
             </div>
           </div>
           <div className="flex flex-row justify-between items-center w-full pr-[47px] md:pr-5">
-            <Button className="h-[48px] px-[31px] sm:px-5 text-white-A700 text-base font-semibold bg-gray-900 min-w-[156px] rounded-[10px]">
+            <Link
+              to="/propertydetails"
+              className="h-[48px] px-[31px] sm:px-5 text-white-A700 text-base font-semibold bg-gray-900 min-w-[156px] rounded-[10px] flex justify-center items-center"
+            >
               {viewDetails}
-            </Button>
+            </Link>
           </div>
         </div>
       </div>

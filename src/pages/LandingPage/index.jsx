@@ -32,7 +32,7 @@ export default function LandingPage() {
                     Where you&#39;ll love to live
                   </>
                 </Heading>
-                <Text size="lg" as="p" className="!text-gray-700">
+                <Text size="lg" as="p" className="!text-gray-700 mb-3">
                   We help businesses customize, automate, and scale up their ad
                   production and delivery.
                 </Text>
@@ -714,7 +714,7 @@ export default function LandingPage() {
               <div className="flex flex-col items-center justify-start w-[29%] md:w-full gap-[43px]">
                 <div className="flex flex-row justify-start items-start w-full gap-[11px]">
                   <Img
-                    src="images/img_real_estate_1.svg"
+                    src="images/sport_name.png"
                     alt="realestateone"
                     className="h-[40px] w-[40px]"
                   />
@@ -723,7 +723,7 @@ export default function LandingPage() {
                     as="p"
                     className="mt-[5px] !text-orange-A700 !font-markoone"
                   >
-                    Relasto
+                    SportsSpark
                   </Text>
                 </div>
                 <div className="flex flex-col items-start justify-start w-full gap-7">

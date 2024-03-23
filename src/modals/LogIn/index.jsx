@@ -2,7 +2,7 @@ import React from "react";
 import { Heading, Button, Img, CheckBox, Input } from "../../components";
 import { default as ModalProvider } from "react-modal";
 
-export default function LogIn({ isOpen, onClose, ...props }) {
+export default function LogIn({ isOpen, onClose, onOpen, ...props }) {
   return (
     <ModalProvider
       {...props}
@@ -111,7 +111,7 @@ export default function LogIn({ isOpen, onClose, ...props }) {
                 Don’t have an account?
               </Heading>
             </a>
-            <a href="#" className="mr-[25px] sm:mr-5">
+            <a href="#" className="mr-[25px] sm:mr-5" onClick={onOpen}>
               <Heading size="lg" as="h3" className="tracking-[-0.40px]">
                 Create Account
               </Heading>

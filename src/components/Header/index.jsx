@@ -4,24 +4,11 @@ import { Button, Input, Img, Heading, Text } from "./..";
 import { Link } from "react-router-dom";
 import LogIn from "modals/LogIn";
 import CreateAccount from "modals/CreateAccount";
+import { useLoginRegisterModal } from "context/loginRegisterModalContext";
 
 export default function Header({ ...props }) {
+  const loginRegisterContext = useLoginRegisterModal();
   const [searchBarValue1, setSearchBarValue1] = React.useState("");
-  const [showLoginModal, setShowLoginModal] = React.useState(false);
-  const [showSignUpModal, setShowSignUpModal] = React.useState(false);
-
-  function hideLoginModal() {
-    setShowLoginModal(false);
-  }
-
-  function closeSignUpModal() {
-    setShowSignUpModal(false);
-  }
-
-  function openSignUpModal() {
-    hideLoginModal();
-    setShowSignUpModal(true);
-  }
 
   return (
     <header {...props}>
@@ -91,14 +78,26 @@ export default function Header({ ...props }) {
             size="lg"
             shape="round"
             className="sm:px-5 font-semibold min-w-[94px]"
-            onClick={() => setShowLoginModal((prevValue) => !prevValue)}
+            onClick={loginRegisterContext.openLoginModal}
           >
             Log in
           </Button>
         </div>
       </div>
 
-      <LogIn isOpen={showLoginModal} onClose={hideLoginModal} />
+      <LogIn
+        isOpen={loginRegisterContext.isLoginModalOpen}
+        onClose={loginRegisterContext.closeLoginModal}
+        onOpen={loginRegisterContext.openRegisterModal}
+      />
+      <CreateAccount
+        isOpen={
+          !loginRegisterContext.isLoginModalOpen &&
+          loginRegisterContext.isRegisterModalOpen
+        }
+        onClose={loginRegisterContext.closeRegisterModal}
+        onOpen={loginRegisterContext.openLoginModal}
+      />
     </header>
   );
 }

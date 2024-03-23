@@ -19,7 +19,7 @@ export default function PropertyDetailsPage() {
   return (
     <>
       <Helmet>
-        <title>Varshil shah's Application2</title>
+        <title>Sports App</title>
         <meta
           name="description"
           content="Web site created using create-react-app"

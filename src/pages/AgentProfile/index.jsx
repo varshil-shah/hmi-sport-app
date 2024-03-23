@@ -9,8 +9,11 @@ export default function AgentProfilePage() {
   return (
     <>
       <Helmet>
-        <title>Varshil shah's Application2</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <title>Sports App</title>
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-col items-center justify-start w-full gap-[100px] overflow-auto bg-gray-50_01">
         <div className="flex flex-col items-center justify-start w-full">
@@ -34,17 +37,30 @@ export default function AgentProfilePage() {
                   <div className="flex flex-row md:flex-col justify-between items-center w-[85%] md:w-full md:gap-10">
                     <div className="flex flex-row md:flex-col justify-start items-center w-[83%] md:w-full gap-8 md:gap-5">
                       <div className="flex flex-col items-start justify-start w-[49%] md:w-full gap-1.5">
-                        <Heading size="2xl" as="h1" className="tracking-[-0.48px]">
+                        <Heading
+                          size="2xl"
+                          as="h1"
+                          className="tracking-[-0.48px]"
+                        >
                           Bruno Fernandes
                         </Heading>
                         <div className="flex flex-row justify-start items-center gap-3.5 py-0.5">
-                          <RatingBar value={1} isEditable={true} size={16} className="flex justify-between" />
+                          <RatingBar
+                            value={1}
+                            isEditable={true}
+                            size={16}
+                            className="flex justify-between"
+                          />
                           <Heading as="h2">4.5 review</Heading>
                         </div>
                       </div>
                       <div className="flex flex-col items-center justify-start w-[49%] md:w-full gap-2">
                         <div className="flex flex-row justify-start items-center w-full gap-[13px] py-0.5">
-                          <Img src="images/img_icon_24px_call.svg" alt="icon24pxcall" className="h-[24px] w-[24px]" />
+                          <Img
+                            src="images/img_icon_24px_call.svg"
+                            alt="icon24pxcall"
+                            className="h-[24px] w-[24px]"
+                          />
                           <Heading size="md" as="h3">
                             (123) 456-7890
                           </Heading>
@@ -61,7 +77,10 @@ export default function AgentProfilePage() {
                         </div>
                       </div>
                     </div>
-                    <Button shape="round" className="sm:px-5 font-semibold min-w-[112px]">
+                    <Button
+                      shape="round"
+                      className="sm:px-5 font-semibold min-w-[112px]"
+                    >
                       Contact
                     </Button>
                   </div>
@@ -69,7 +88,11 @@ export default function AgentProfilePage() {
                 <div className="flex flex-row justify-center w-full">
                   <div className="flex flex-col items-center justify-start w-full gap-12 md:px-5 max-w-[1200px]">
                     <div className="flex flex-row md:flex-col justify-start w-full gap-3 md:gap-5">
-                      <Button size="lg" shape="round" className="sm:px-5 font-semibold min-w-[291px]">
+                      <Button
+                        size="lg"
+                        shape="round"
+                        className="sm:px-5 font-semibold min-w-[291px]"
+                      >
                         For rent
                       </Button>
                       <Button
@@ -125,7 +148,12 @@ export default function AgentProfilePage() {
                     </div>
                     <div className="flex flex-row sm:flex-col justify-between w-full sm:gap-10">
                       <div className="flex flex-row justify-start gap-[5px]">
-                        <Button color="gray_700" variant="outline" shape="round" className="font-semibold min-w-[48px]">
+                        <Button
+                          color="gray_700"
+                          variant="outline"
+                          shape="round"
+                          className="font-semibold min-w-[48px]"
+                        >
                           1
                         </Button>
                         <Button
@@ -165,7 +193,12 @@ export default function AgentProfilePage() {
                         color="blue_gray_100_02"
                         variant="outline"
                         shape="round"
-                        rightIcon={<Img src="images/img_icon_16px_arrow_right.svg" alt="icon / 16px / arrow - right" />}
+                        rightIcon={
+                          <Img
+                            src="images/img_icon_16px_arrow_right.svg"
+                            alt="icon / 16px / arrow - right"
+                          />
+                        }
                         className="gap-1 font-semibold min-w-[134px]"
                       >
                         Next Page
@@ -191,11 +224,20 @@ export default function AgentProfilePage() {
                     Bruno Fernandes
                   </Heading>
                   <div className="flex flex-row justify-start items-center gap-3.5 py-0.5">
-                    <RatingBar value={1} isEditable={true} size={16} className="flex justify-between" />
+                    <RatingBar
+                      value={1}
+                      isEditable={true}
+                      size={16}
+                      className="flex justify-between"
+                    />
                     <Heading as="h3">4.5 review</Heading>
                   </div>
                   <div className="flex flex-row justify-start items-center gap-[13px] py-0.5">
-                    <Img src="images/img_icon_24px_call.svg" alt="icon24pxcall" className="h-[24px] w-[24px]" />
+                    <Img
+                      src="images/img_icon_24px_call.svg"
+                      alt="icon24pxcall"
+                      className="h-[24px] w-[24px]"
+                    />
                     <Heading size="md" as="h4">
                       (123) 456-7890
                     </Heading>
@@ -214,11 +256,14 @@ export default function AgentProfilePage() {
               </div>
               <Text as="p">
                 <>
-                  A slider is great way to display a slideshow featuring images or videos, usually on your
-                  homepage.Adding sliders to your site is no longer difficult. You don’t have to know coding anymore.
-                  Just use a slider widget and it will automatically insert the slider on your web page.
+                  A slider is great way to display a slideshow featuring images
+                  or videos, usually on your homepage.Adding sliders to your
+                  site is no longer difficult. You don’t have to know coding
+                  anymore. Just use a slider widget and it will automatically
+                  insert the slider on your web page.
                   <br />
-                  One of the best ways to add beautiful sliders with excellent responsiveness and advanced options.{" "}
+                  One of the best ways to add beautiful sliders with excellent
+                  responsiveness and advanced options.{" "}
                 </>
               </Text>
             </div>
@@ -272,8 +317,17 @@ export default function AgentProfilePage() {
                 <Heading size="lg" as="h5" className="tracking-[-0.40px]">
                   Website
                 </Heading>
-                <a href="www.abc.com" target="_blank" rel="noreferrer" className="mb-px">
-                  <Heading size="md" as="h6" className="!text-gray-600_02 underline">
+                <a
+                  href="www.abc.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mb-px"
+                >
+                  <Heading
+                    size="md"
+                    as="h6"
+                    className="!text-gray-600_02 underline"
+                  >
                     www.abc.com
                   </Heading>
                 </a>
@@ -284,11 +338,31 @@ export default function AgentProfilePage() {
                 Social
               </Heading>
               <div className="flex flex-row justify-start gap-4">
-                <Img src="images/img_social_icon_facebook.svg" alt="socialicon_one" className="h-[30px] w-[30px]" />
-                <Img src="images/img_social_icon_linkedin.svg" alt="socialicon" className="h-[30px] w-[30px]" />
-                <Img src="images/img_social_icon_twitter.svg" alt="socialicon_five" className="h-[30px] w-[30px]" />
-                <Img src="images/img_social_icon_youtube.svg" alt="socialicon" className="h-[30px] w-[30px]" />
-                <Img src="images/img_social_icon_rss.svg" alt="socialiconrss" className="h-[30px] w-[30px]" />
+                <Img
+                  src="images/img_social_icon_facebook.svg"
+                  alt="socialicon_one"
+                  className="h-[30px] w-[30px]"
+                />
+                <Img
+                  src="images/img_social_icon_linkedin.svg"
+                  alt="socialicon"
+                  className="h-[30px] w-[30px]"
+                />
+                <Img
+                  src="images/img_social_icon_twitter.svg"
+                  alt="socialicon_five"
+                  className="h-[30px] w-[30px]"
+                />
+                <Img
+                  src="images/img_social_icon_youtube.svg"
+                  alt="socialicon"
+                  className="h-[30px] w-[30px]"
+                />
+                <Img
+                  src="images/img_social_icon_rss.svg"
+                  alt="socialiconrss"
+                  className="h-[30px] w-[30px]"
+                />
               </div>
             </div>
           </div>
@@ -302,7 +376,12 @@ export default function AgentProfilePage() {
               <Button
                 size="4xl"
                 shape="round"
-                rightIcon={<Img src="images/img_icon_24px_plus_white_a700.svg" alt="icon / 24px / plus" />}
+                rightIcon={
+                  <Img
+                    src="images/img_icon_24px_plus_white_a700.svg"
+                    alt="icon / 24px / plus"
+                  />
+                }
                 className="gap-2.5 font-bold min-w-[190px]"
               >
                 Write a Reveiw
@@ -313,19 +392,39 @@ export default function AgentProfilePage() {
           <div className="flex flex-col items-start justify-start w-full gap-[25px] px-[25px] sm:px-5">
             <div className="flex flex-col w-full gap-[25px]">
               <div className="flex flex-col items-center justify-center w-full gap-10 p-[29px] sm:p-5 border-blue_gray-100_01 border border-solid bg-white-A700 rounded-[20px]">
-                <Heading size="2xl" as="h2" className="mt-[9px] !text-gray-600_02 !font-semibold !leading-[165%]">
-                  Eget eu massa et consectetur. Mauris donec. Leo a, id sed duis proin sodales. Turpis viverra diam
-                  porttitor mattis morbi ac amet. Euismod commodo. We get you customer relationships that last.{" "}
+                <Heading
+                  size="2xl"
+                  as="h2"
+                  className="mt-[9px] !text-gray-600_02 !font-semibold !leading-[165%]"
+                >
+                  Eget eu massa et consectetur. Mauris donec. Leo a, id sed duis
+                  proin sodales. Turpis viverra diam porttitor mattis morbi ac
+                  amet. Euismod commodo. We get you customer relationships that
+                  last.{" "}
                 </Heading>
                 <div className="flex flex-col items-center justify-start w-full mb-[9px] gap-6">
                   <div className="flex flex-row justify-start w-full gap-[50px]">
                     <div className="flex flex-row justify-start items-center w-[23%] gap-2.5">
-                      <RatingBar value={1} isEditable={true} size={24} starCount={4} className="flex justify-between" />
-                      <Heading size="lg" as="h3" className="!text-gray-600_02 tracking-[-0.40px]">
+                      <RatingBar
+                        value={1}
+                        isEditable={true}
+                        size={24}
+                        starCount={4}
+                        className="flex justify-between"
+                      />
+                      <Heading
+                        size="lg"
+                        as="h3"
+                        className="!text-gray-600_02 tracking-[-0.40px]"
+                      >
                         4.5 review
                       </Heading>
                     </div>
-                    <Heading size="lg" as="h4" className="!text-gray-600_02 tracking-[-0.40px]">
+                    <Heading
+                      size="lg"
+                      as="h4"
+                      className="!text-gray-600_02 tracking-[-0.40px]"
+                    >
                       02 June 2022
                     </Heading>
                   </div>
@@ -336,7 +435,11 @@ export default function AgentProfilePage() {
                       className="h-[80px] w-[80px] md:h-auto rounded-[50%]"
                     />
                     <div className="flex flex-col items-start justify-center w-[92%] md:w-full gap-[5px]">
-                      <Heading size="3xl" as="h5" className="mt-0.5 tracking-[-0.56px]">
+                      <Heading
+                        size="3xl"
+                        as="h5"
+                        className="mt-0.5 tracking-[-0.56px]"
+                      >
                         Taylor Wilson
                       </Heading>
                       <Heading size="md" as="h6">
@@ -347,19 +450,39 @@ export default function AgentProfilePage() {
                 </div>
               </div>
               <div className="flex flex-col items-center justify-center w-full gap-10 p-[29px] sm:p-5 border-blue_gray-100_01 border border-solid bg-white-A700 rounded-[20px]">
-                <Heading size="2xl" as="h4" className="mt-[9px] !text-gray-600_02 !font-semibold !leading-[165%]">
-                  Eget eu massa et consectetur. Mauris donec. Leo a, id sed duis proin sodales. Turpis viverra diam
-                  porttitor mattis morbi ac amet. Euismod commodo. We get you customer relationships that last.{" "}
+                <Heading
+                  size="2xl"
+                  as="h4"
+                  className="mt-[9px] !text-gray-600_02 !font-semibold !leading-[165%]"
+                >
+                  Eget eu massa et consectetur. Mauris donec. Leo a, id sed duis
+                  proin sodales. Turpis viverra diam porttitor mattis morbi ac
+                  amet. Euismod commodo. We get you customer relationships that
+                  last.{" "}
                 </Heading>
                 <div className="flex flex-col items-center justify-start w-full mb-[9px] gap-6">
                   <div className="flex flex-row justify-start w-full gap-[50px]">
                     <div className="flex flex-row justify-start items-center w-[23%] gap-2.5">
-                      <RatingBar value={1} isEditable={true} size={24} starCount={4} className="flex justify-between" />
-                      <Heading size="lg" as="h5" className="!text-gray-600_02 tracking-[-0.40px]">
+                      <RatingBar
+                        value={1}
+                        isEditable={true}
+                        size={24}
+                        starCount={4}
+                        className="flex justify-between"
+                      />
+                      <Heading
+                        size="lg"
+                        as="h5"
+                        className="!text-gray-600_02 tracking-[-0.40px]"
+                      >
                         4.5 review
                       </Heading>
                     </div>
-                    <Heading size="lg" as="h5" className="!text-gray-600_02 tracking-[-0.40px]">
+                    <Heading
+                      size="lg"
+                      as="h5"
+                      className="!text-gray-600_02 tracking-[-0.40px]"
+                    >
                       02 June 2022
                     </Heading>
                   </div>
@@ -370,7 +493,11 @@ export default function AgentProfilePage() {
                       className="h-[80px] w-[80px] md:h-auto rounded-[50%]"
                     />
                     <div className="flex flex-col items-start justify-center w-[92%] md:w-full gap-[5px]">
-                      <Heading size="3xl" as="h3" className="mt-0.5 tracking-[-0.56px]">
+                      <Heading
+                        size="3xl"
+                        as="h3"
+                        className="mt-0.5 tracking-[-0.56px]"
+                      >
                         Taylor Wilson
                       </Heading>
                       <Heading size="md" as="h6">
@@ -381,19 +508,39 @@ export default function AgentProfilePage() {
                 </div>
               </div>
               <div className="flex flex-col items-center justify-center w-full gap-10 p-[29px] sm:p-5 border-blue_gray-100_01 border border-solid bg-white-A700 rounded-[20px]">
-                <Heading size="2xl" as="h4" className="mt-[9px] !text-gray-600_02 !font-semibold !leading-[165%]">
-                  Eget eu massa et consectetur. Mauris donec. Leo a, id sed duis proin sodales. Turpis viverra diam
-                  porttitor mattis morbi ac amet. Euismod commodo. We get you customer relationships that last.{" "}
+                <Heading
+                  size="2xl"
+                  as="h4"
+                  className="mt-[9px] !text-gray-600_02 !font-semibold !leading-[165%]"
+                >
+                  Eget eu massa et consectetur. Mauris donec. Leo a, id sed duis
+                  proin sodales. Turpis viverra diam porttitor mattis morbi ac
+                  amet. Euismod commodo. We get you customer relationships that
+                  last.{" "}
                 </Heading>
                 <div className="flex flex-col items-center justify-start w-full mb-[9px] gap-6">
                   <div className="flex flex-row justify-start w-full gap-[50px]">
                     <div className="flex flex-row justify-start items-center w-[23%] gap-2.5">
-                      <RatingBar value={1} isEditable={true} size={24} starCount={4} className="flex justify-between" />
-                      <Heading size="lg" as="h5" className="!text-gray-600_02 tracking-[-0.40px]">
+                      <RatingBar
+                        value={1}
+                        isEditable={true}
+                        size={24}
+                        starCount={4}
+                        className="flex justify-between"
+                      />
+                      <Heading
+                        size="lg"
+                        as="h5"
+                        className="!text-gray-600_02 tracking-[-0.40px]"
+                      >
                         4.5 review
                       </Heading>
                     </div>
-                    <Heading size="lg" as="h5" className="!text-gray-600_02 tracking-[-0.40px]">
+                    <Heading
+                      size="lg"
+                      as="h5"
+                      className="!text-gray-600_02 tracking-[-0.40px]"
+                    >
                       02 June 2022
                     </Heading>
                   </div>
@@ -404,7 +551,11 @@ export default function AgentProfilePage() {
                       className="h-[80px] w-[80px] md:h-auto rounded-[50%]"
                     />
                     <div className="flex flex-col items-start justify-center w-[92%] md:w-full gap-[5px]">
-                      <Heading size="3xl" as="h3" className="mt-0.5 tracking-[-0.56px]">
+                      <Heading
+                        size="3xl"
+                        as="h3"
+                        className="mt-0.5 tracking-[-0.56px]"
+                      >
                         Taylor Wilson
                       </Heading>
                       <Heading size="md" as="h6">
@@ -419,7 +570,9 @@ export default function AgentProfilePage() {
               color="gray_600_02"
               variant="outline"
               shape="round"
-              rightIcon={<Img src="images/img_arrowdown_gray_900.svg" alt="arrow_down" />}
+              rightIcon={
+                <Img src="images/img_arrowdown_gray_900.svg" alt="arrow_down" />
+              }
               className="gap-1 font-semibold min-w-[128px] sm:min-w-full"
             >
               See more

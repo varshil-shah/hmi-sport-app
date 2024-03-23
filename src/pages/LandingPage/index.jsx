@@ -3,13 +3,12 @@ import { Helmet } from "react-helmet";
 import { Heading, Img, Text, Button, Input } from "../../components";
 import Header from "../../components/Header";
 import LandingPageCard from "../../components/LandingPageCard";
-import { TabPanel, TabList, Tab, Tabs } from "react-tabs";
 
 export default function LandingPage() {
   return (
     <>
       <Helmet>
-        <title>Varshil shah's Application2</title>
+        <title>Sports App</title>
         <meta
           name="description"
           content="Web site created using create-react-app"

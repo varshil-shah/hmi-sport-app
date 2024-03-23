@@ -4,7 +4,6 @@ import Home from "pages/Home";
 import NotFound from "pages/NotFound";
 import LandingPage from "pages/LandingPage";
 import AboutUs from "pages/AboutUs";
-import Listing from "pages/Listing";
 import ListingMapView from "pages/ListingMapView";
 import PropertyDetails from "pages/PropertyDetails";
 import AgentList from "pages/AgentList";
@@ -15,7 +14,7 @@ import BlogDetails from "pages/BlogDetails";
 import Error from "pages/Error";
 import FAQ from "pages/FAQ";
 import PrivacyPolicy from "pages/PrivacyPolicy";
-import License from "pages/License";
+import Analytics from "pages/Analytics";
 
 const ProjectRoutes = () => {
   let element = useRoutes([
@@ -74,8 +73,8 @@ const ProjectRoutes = () => {
       element: <PrivacyPolicy />,
     },
     {
-      path: "license",
-      element: <License />,
+      path: "analytics",
+      element: <Analytics />,
     },
   ]);
 

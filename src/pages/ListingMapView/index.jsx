@@ -38,7 +38,7 @@ export default function ListingMapViewPage() {
   return (
     <>
       <Helmet>
-        <title>Varshil shah's Application2</title>
+        <title>Sports App</title>
         <meta
           name="description"
           content="Web site created using create-react-app"
@@ -104,20 +104,7 @@ export default function ListingMapViewPage() {
                     options={teamOptions}
                     className="w-[18%] md:w-full gap-px font-bold border-blue_gray-100_01 border border-solid"
                   />
-                  <Button
-                    color="white_A700"
-                    size="4xl"
-                    shape="round"
-                    rightIcon={
-                      <Img
-                        src="images/img_icon_24px_plus.svg"
-                        alt="icon / 24px / plus"
-                      />
-                    }
-                    className="gap-3 text-gray-700 font-bold border-blue_gray-100_01 border border-solid min-w-[113px]"
-                  >
-                    More
-                  </Button>
+
                   <Button
                     size="4xl"
                     shape="round"

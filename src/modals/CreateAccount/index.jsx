@@ -2,7 +2,7 @@ import React from "react";
 import { Heading, Button, Img, CheckBox, Input } from "../../components";
 import { default as ModalProvider } from "react-modal";
 
-export default function CreateAccount({ isOpen, ...props }) {
+export default function CreateAccount({ isOpen, onClose, onOpen, ...props }) {
   return (
     <ModalProvider
       {...props}
@@ -18,7 +18,12 @@ export default function CreateAccount({ isOpen, ...props }) {
                 <Heading size="4xl" as="h1" className="tracking-[-0.72px]">
                   Create Account
                 </Heading>
-                <Button size="sm" shape="square" className="w-[30px]">
+                <Button
+                  size="sm"
+                  shape="square"
+                  className="w-[30px]"
+                  onClick={onClose}
+                >
                   <Img src="images/img_icon_24px_close.svg" />
                 </Button>
               </div>
@@ -135,7 +140,7 @@ export default function CreateAccount({ isOpen, ...props }) {
                 Have an account?
               </Heading>
             </a>
-            <a href="#" className="mr-[196px] md:mr-5">
+            <a href="#" className="mr-[196px] md:mr-5" onClick={onOpen}>
               <Heading size="lg" as="h3" className="tracking-[-0.40px]">
                 Log in
               </Heading>

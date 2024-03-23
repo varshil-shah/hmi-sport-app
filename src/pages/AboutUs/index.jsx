@@ -8,8 +8,11 @@ export default function AboutUsPage() {
   return (
     <>
       <Helmet>
-        <title>Varshil shah's Application2</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <title>Sports App</title>
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-col items-center justify-start w-full gap-[100px] bg-white-A700">
         <Header className="flex justify-center items-center w-full md:h-auto p-[19px] bg-white-A700" />
@@ -17,7 +20,11 @@ export default function AboutUsPage() {
           <div className="flex flex-row justify-center w-full">
             <div className="flex flex-col items-center justify-start w-full gap-[38px] md:px-5 max-w-[1200px]">
               <div className="flex flex-col items-center justify-start w-full gap-4">
-                <Heading size="6xl" as="h1" className="tracking-[-1.08px] text-center">
+                <Heading
+                  size="6xl"
+                  as="h1"
+                  className="tracking-[-1.08px] text-center"
+                >
                   <>
                     Reimagining real estate to <br />
                     make it easier to unlock.
@@ -25,9 +32,12 @@ export default function AboutUsPage() {
                 </Heading>
                 <Text as="p" className="!text-gray-700 text-center">
                   <>
-                    On the other hand, we denounce with righteous indignation and dislike men who <br />
-                    are so beguiled and demoralized by the charms of pleasure of the moment, <br />
-                    so blinded by desire, that they cannot foresee the pain and trouble.
+                    On the other hand, we denounce with righteous indignation
+                    and dislike men who <br />
+                    are so beguiled and demoralized by the charms of pleasure of
+                    the moment, <br />
+                    so blinded by desire, that they cannot foresee the pain and
+                    trouble.
                   </>
                 </Text>
               </div>
@@ -61,14 +71,23 @@ export default function AboutUsPage() {
           </div>
           <div className="flex flex-row md:flex-col w-full gap-[100px] p-[50px] md:gap-10 md:p-5 bg-gray-50">
             <div className="flex flex-col items-start justify-start w-[17%] md:w-full ml-[70px] gap-[18px] md:ml-5">
-              <Button color="white_A700" size="3xl" shape="circle" className="w-[60px]">
+              <Button
+                color="white_A700"
+                size="3xl"
+                shape="circle"
+                className="w-[60px]"
+              >
                 <Img src="images/img_frame.svg" />
               </Button>
               <div className="flex flex-col items-start justify-start w-full gap-[13px]">
                 <Heading size="5xl" as="h2" className="tracking-[-0.92px]">
                   $15.4M
                 </Heading>
-                <Heading size="lg" as="h3" className="!text-blue_gray-600 tracking-[-0.40px]">
+                <Heading
+                  size="lg"
+                  as="h3"
+                  className="!text-blue_gray-600 tracking-[-0.40px]"
+                >
                   <>
                     Owned from
                     <br />
@@ -78,27 +97,45 @@ export default function AboutUsPage() {
               </div>
             </div>
             <div className="flex flex-col items-start justify-start w-[17%] md:w-full gap-[18px]">
-              <Button color="white_A700" size="3xl" shape="circle" className="w-[60px]">
+              <Button
+                color="white_A700"
+                size="3xl"
+                shape="circle"
+                className="w-[60px]"
+              >
                 <Img src="images/img_frame_orange_a700.svg" />
               </Button>
               <div className="flex flex-col items-start justify-start w-full gap-[13px]">
                 <Heading size="5xl" as="h4" className="tracking-[-0.92px]">
                   25K+
                 </Heading>
-                <Heading size="lg" as="h5" className="!text-blue_gray-600 tracking-[-0.40px]">
+                <Heading
+                  size="lg"
+                  as="h5"
+                  className="!text-blue_gray-600 tracking-[-0.40px]"
+                >
                   Properties for Buy & sell Successfully
                 </Heading>
               </div>
             </div>
             <div className="flex flex-col items-start justify-start w-[17%] md:w-full gap-[18px]">
-              <Button color="white_A700" size="3xl" shape="circle" className="w-[60px]">
+              <Button
+                color="white_A700"
+                size="3xl"
+                shape="circle"
+                className="w-[60px]"
+              >
                 <Img src="images/img_icon.svg" />
               </Button>
               <div className="flex flex-col items-start justify-start w-full gap-[13px]">
                 <Heading size="5xl" as="h6" className="tracking-[-0.92px]">
                   500
                 </Heading>
-                <Heading size="lg" as="h5" className="!text-blue_gray-600 tracking-[-0.40px]">
+                <Heading
+                  size="lg"
+                  as="h5"
+                  className="!text-blue_gray-600 tracking-[-0.40px]"
+                >
                   <>
                     Daily completed <br />
                     transactions
@@ -107,14 +144,23 @@ export default function AboutUsPage() {
               </div>
             </div>
             <div className="flex flex-col items-start justify-start w-[17%] md:w-full mb-[26px] mr-[70px] gap-[18px] md:mr-5">
-              <Button color="white_A700" size="3xl" shape="circle" className="w-[60px]">
+              <Button
+                color="white_A700"
+                size="3xl"
+                shape="circle"
+                className="w-[60px]"
+              >
                 <Img src="images/img_icon_orange_a700.svg" />
               </Button>
               <div className="flex flex-col items-start justify-start w-full gap-4">
                 <Heading size="5xl" as="h1" className="tracking-[-0.92px]">
                   600+
                 </Heading>
-                <Heading size="lg" as="h5" className="!text-blue_gray-600 tracking-[-0.40px]">
+                <Heading
+                  size="lg"
+                  as="h5"
+                  className="!text-blue_gray-600 tracking-[-0.40px]"
+                >
                   Reagular Clients
                 </Heading>
               </div>
@@ -128,7 +174,8 @@ export default function AboutUsPage() {
                     A note from our founders.
                   </Heading>
                   <Text as="p" className="!text-gray-700">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. In a free hour,
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. In a free hour,
                   </Text>
                 </div>
                 <div className="flex flex-col w-full gap-[30px]">
@@ -147,9 +194,11 @@ export default function AboutUsPage() {
                         It all started in 1995
                       </Heading>
                       <Text as="p" className="!text-gray-700">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. In a free hour, On
-                        the other hand, we denounce with righteous indignation and dislike men who are so beguiled and
-                        demoralized by the charms of pleasure of the moment.
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. In a free hour, On the other hand,
+                        we denounce with righteous indignation and dislike men
+                        who are so beguiled and demoralized by the charms of
+                        pleasure of the moment.
                       </Text>
                     </div>
                   </div>
@@ -168,9 +217,11 @@ export default function AboutUsPage() {
                         Donate launches in 2007
                       </Heading>
                       <Text as="p" className="!text-gray-700">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. In a free hour, On
-                        the other hand, we denounce with righteous indignation and dislike men who are so beguiled and
-                        demoralized by the charms of pleasure of the moment.
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. In a free hour, On the other hand,
+                        we denounce with righteous indignation and dislike men
+                        who are so beguiled and demoralized by the charms of
+                        pleasure of the moment.
                       </Text>
                     </div>
                   </div>
@@ -189,9 +240,11 @@ export default function AboutUsPage() {
                         Relasto holds its initial public offering in 2008
                       </Heading>
                       <Text as="p" className="!text-gray-700">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. In a free hour, On
-                        the other hand, we denounce with righteous indignation and dislike men who are so beguiled and
-                        demoralized by the charms of pleasure of the moment.
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. In a free hour, On the other hand,
+                        we denounce with righteous indignation and dislike men
+                        who are so beguiled and demoralized by the charms of
+                        pleasure of the moment.
                       </Text>
                     </div>
                   </div>
@@ -218,11 +271,14 @@ export default function AboutUsPage() {
                   </Heading>
                   <Text as="p" className="!text-gray-700">
                     <>
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. In a free hour, On the
-                      other hand, we denounce with righteous indignation and dislike men who are so beguiled and
-                      demoralized by the charms of pleasure of the moment.
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. In a free hour, On the other hand,
+                      we denounce with righteous indignation and dislike men who
+                      are so beguiled and demoralized by the charms of pleasure
+                      of the moment.
                       <br />
-                      In a free hour, On the other hand, we denounce with righteous indignation and dislike men .
+                      In a free hour, On the other hand, we denounce with
+                      righteous indignation and dislike men .
                     </>
                   </Text>
                 </div>
@@ -239,7 +295,11 @@ export default function AboutUsPage() {
           </div>
           <div className="flex flex-row justify-center w-full">
             <div className="flex flex-col items-center justify-start w-full gap-[58px] md:px-5 max-w-[1200px]">
-              <Heading size="4xl" as="h2" className="tracking-[-0.72px] text-center">
+              <Heading
+                size="4xl"
+                as="h2"
+                className="tracking-[-0.72px] text-center"
+              >
                 Relasto Team members
               </Heading>
               <div className="justify-center w-full gap-6 grid-cols-4 md:grid-cols-2 md:gap-5 sm:grid-cols-1 grid">
@@ -295,7 +355,11 @@ export default function AboutUsPage() {
                     className="w-[282px] md:h-auto object-cover rounded-[10px]"
                   />
                   <div className="flex flex-col items-start justify-center w-full gap-[3px]">
-                    <Heading size="lg" as="h6" className="mt-0.5 tracking-[-0.40px]">
+                    <Heading
+                      size="lg"
+                      as="h6"
+                      className="mt-0.5 tracking-[-0.40px]"
+                    >
                       Guy Hawkins
                     </Heading>
                     <Text as="p" className="!text-gray-700">
@@ -325,7 +389,11 @@ export default function AboutUsPage() {
                     className="w-[282px] md:h-auto object-cover rounded-[10px]"
                   />
                   <div className="flex flex-col items-start justify-center w-full gap-[3px]">
-                    <Heading size="lg" as="h5" className="mt-0.5 tracking-[-0.40px]">
+                    <Heading
+                      size="lg"
+                      as="h5"
+                      className="mt-0.5 tracking-[-0.40px]"
+                    >
                       Ralph Edwards
                     </Heading>
                     <Text as="p" className="!text-gray-700">
@@ -340,7 +408,11 @@ export default function AboutUsPage() {
                     className="w-[282px] md:h-auto object-cover rounded-[10px]"
                   />
                   <div className="flex flex-col items-start justify-center w-full gap-[3px]">
-                    <Heading size="lg" as="h5" className="mt-0.5 tracking-[-0.40px]">
+                    <Heading
+                      size="lg"
+                      as="h5"
+                      className="mt-0.5 tracking-[-0.40px]"
+                    >
                       Arlene McCoy
                     </Heading>
                     <Text as="p" className="!text-gray-700">
@@ -370,7 +442,11 @@ export default function AboutUsPage() {
                     className="w-[282px] md:h-auto object-cover rounded-[10px]"
                   />
                   <div className="flex flex-col items-start justify-center w-full gap-[3px]">
-                    <Heading size="lg" as="h5" className="mt-0.5 tracking-[-0.40px]">
+                    <Heading
+                      size="lg"
+                      as="h5"
+                      className="mt-0.5 tracking-[-0.40px]"
+                    >
                       Courtney Henry
                     </Heading>
                     <Text as="p" className="!text-gray-700">
@@ -385,7 +461,11 @@ export default function AboutUsPage() {
                     className="w-[282px] md:h-auto object-cover rounded-[10px]"
                   />
                   <div className="flex flex-col items-start justify-center w-full gap-[3px]">
-                    <Heading size="lg" as="h5" className="mt-0.5 tracking-[-0.40px]">
+                    <Heading
+                      size="lg"
+                      as="h5"
+                      className="mt-0.5 tracking-[-0.40px]"
+                    >
                       Bessie Cooper
                     </Heading>
                     <Text as="p" className="!text-gray-700">
@@ -400,7 +480,11 @@ export default function AboutUsPage() {
                     className="w-[282px] md:h-auto object-cover rounded-[10px]"
                   />
                   <div className="flex flex-col items-start justify-center w-full gap-[3px]">
-                    <Heading size="lg" as="h5" className="mt-0.5 tracking-[-0.40px]">
+                    <Heading
+                      size="lg"
+                      as="h5"
+                      className="mt-0.5 tracking-[-0.40px]"
+                    >
                       Cody Fisher
                     </Heading>
                     <Text as="p" className="!text-gray-700">
@@ -415,7 +499,11 @@ export default function AboutUsPage() {
                     className="w-[282px] md:h-auto object-cover rounded-[10px]"
                   />
                   <div className="flex flex-col items-start justify-center w-full gap-[3px]">
-                    <Heading size="lg" as="h5" className="mt-0.5 tracking-[-0.40px]">
+                    <Heading
+                      size="lg"
+                      as="h5"
+                      className="mt-0.5 tracking-[-0.40px]"
+                    >
                       Cody Fisher
                     </Heading>
                     <Text as="p" className="!text-gray-700">
@@ -430,14 +518,26 @@ export default function AboutUsPage() {
             <div className="flex flex-col items-center justify-start w-full gap-[118px] max-w-[1200px]">
               <div className="flex flex-col items-center justify-start w-full gap-[60px]">
                 <div className="flex flex-row sm:flex-col justify-between items-center w-full sm:gap-10">
-                  <Heading size="4xl" as="h2" className="!text-white-A700 tracking-[-0.72px]">
+                  <Heading
+                    size="4xl"
+                    as="h2"
+                    className="!text-white-A700 tracking-[-0.72px]"
+                  >
                     News & Consult
                   </Heading>
                   <div className="flex flex-row justify-start items-center gap-2">
-                    <Heading size="md" as="h3" className="mt-0.5 !text-orange-A700 !font-bold">
+                    <Heading
+                      size="md"
+                      as="h3"
+                      className="mt-0.5 !text-orange-A700 !font-bold"
+                    >
                       Explore All
                     </Heading>
-                    <Img src="images/img_icon_24px_v.svg" alt="icon24pxv_one" className="h-[24px] w-[24px]" />
+                    <Img
+                      src="images/img_icon_24px_v.svg"
+                      alt="icon24pxv_one"
+                      className="h-[24px] w-[24px]"
+                    />
                   </div>
                 </div>
                 <div className="flex flex-row md:flex-col w-full gap-6">
@@ -448,11 +548,19 @@ export default function AboutUsPage() {
                       className="w-full md:h-auto sm:w-full object-cover rounded-[10px]"
                     />
                     <div className="flex flex-col items-center justify-start w-full gap-[23px]">
-                      <Heading size="2xl" as="h4" className="!text-white-A700 tracking-[-0.48px]">
+                      <Heading
+                        size="2xl"
+                        as="h4"
+                        className="!text-white-A700 tracking-[-0.48px]"
+                      >
                         9 Easy-to-Ambitious DIY Projects to Improve Your Home
                       </Heading>
                       <div className="flex flex-row justify-start items-center w-full gap-2">
-                        <Heading size="md" as="h5" className="mt-px !text-deep_orange-400 !font-bold">
+                        <Heading
+                          size="md"
+                          as="h5"
+                          className="mt-px !text-deep_orange-400 !font-bold"
+                        >
                           Read the Article
                         </Heading>
                         <Img
@@ -470,11 +578,20 @@ export default function AboutUsPage() {
                       className="w-full md:h-auto sm:w-full object-cover rounded-[10px]"
                     />
                     <div className="flex flex-col items-center justify-start w-full gap-[23px]">
-                      <Heading size="2xl" as="h6" className="!text-white-A700 tracking-[-0.48px]">
-                        Serie Shophouse Launch In July, Opportunity For Investors
+                      <Heading
+                        size="2xl"
+                        as="h6"
+                        className="!text-white-A700 tracking-[-0.48px]"
+                      >
+                        Serie Shophouse Launch In July, Opportunity For
+                        Investors
                       </Heading>
                       <div className="flex flex-row justify-start items-center w-full gap-2">
-                        <Heading size="md" as="h6" className="mt-px !text-deep_orange-400 !font-bold">
+                        <Heading
+                          size="md"
+                          as="h6"
+                          className="mt-px !text-deep_orange-400 !font-bold"
+                        >
                           Read the Article
                         </Heading>
                         <Img
@@ -492,11 +609,20 @@ export default function AboutUsPage() {
                       className="w-full md:h-auto sm:w-full object-cover rounded-[10px]"
                     />
                     <div className="flex flex-col items-center justify-start w-full gap-[23px]">
-                      <Heading size="2xl" as="h4" className="!text-white-A700 tracking-[-0.48px]">
-                        Looking for a New Place? Use This Time to Create Your Wishlist
+                      <Heading
+                        size="2xl"
+                        as="h4"
+                        className="!text-white-A700 tracking-[-0.48px]"
+                      >
+                        Looking for a New Place? Use This Time to Create Your
+                        Wishlist
                       </Heading>
                       <div className="flex flex-row justify-start items-center w-full gap-2">
-                        <Heading size="md" as="h6" className="mt-px !text-deep_orange-400 !font-bold">
+                        <Heading
+                          size="md"
+                          as="h6"
+                          className="mt-px !text-deep_orange-400 !font-bold"
+                        >
                           Read the Article
                         </Heading>
                         <Img
@@ -515,7 +641,8 @@ export default function AboutUsPage() {
                     For Recent Update, News.
                   </Heading>
                   <Text as="p" className="!text-gray-900 text-center">
-                    We helps businesses customize, automate and scale up their ad production and delivery.
+                    We helps businesses customize, automate and scale up their
+                    ad production and delivery.
                   </Text>
                 </div>
                 <div className="flex flex-row sm:flex-col justify-start w-[54%] md:w-full gap-2 sm:gap-5">
@@ -528,7 +655,10 @@ export default function AboutUsPage() {
                     placeholder="Enter your Email"
                     className="w-[78%] md:w-full font-semibold"
                   />
-                  <Button shape="round" className="sm:px-5 font-semibold min-w-[126px]">
+                  <Button
+                    shape="round"
+                    className="sm:px-5 font-semibold min-w-[126px]"
+                  >
                     Subscribe
                   </Button>
                 </div>

@@ -88,7 +88,7 @@ function Analytics() {
 
   return (
     <div className="flex flex-col items-center justify-start w-full gap-[50px] overflow-auto bg-white-A700">
-      <div className="flex flex-col items-center justify-start w-full">
+      <div className="flex flex-col items-center justify-start w-full ">
         <Header className="flex justify-center items-center w-full md:h-auto p-4 bg-white-A700" />
         <div className="w-full p-8">
           <Heading as="h2" size="xl" className="mb-4">
@@ -122,7 +122,7 @@ function Analytics() {
               </div>
             </div>
 
-            <div className="bg-white p-4 rounded-lg shadow max-h-fit">
+            <div className="bg-white p-4 rounded-lg shadow max-h-fit items-center">
               <h3 className="text-xl font-bold mb-4">Pie Chart</h3>
               <div className="h-60">
                 <Doughnut data={pieChartData} />

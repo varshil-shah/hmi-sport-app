@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Heading, Button, Img, CheckBox, Input } from "../../components";
 import { default as ModalProvider } from "react-modal";
+// import supabase from "config/supabase";
 
 export default function LogIn({ isOpen, onClose, onOpen, ...props }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  // console.log(supabase.auth.session());
+
   return (
     <ModalProvider
       {...props}
@@ -33,6 +40,8 @@ export default function LogIn({ isOpen, onClose, onOpen, ...props }) {
                   type="email"
                   name="email"
                   placeholder="user / email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   prefix={
                     <Img
                       src="images/img_icon_24px_user.svg"
@@ -46,6 +55,8 @@ export default function LogIn({ isOpen, onClose, onOpen, ...props }) {
                   type="password"
                   name="password"
                   placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   prefix={
                     <Img
                       src="images/img_icon_20px_lock.svg"
@@ -85,20 +96,9 @@ export default function LogIn({ isOpen, onClose, onOpen, ...props }) {
             >
               Log in
             </Button>
-            <Button
-              color="white_A700"
-              size="4xl"
-              shape="round"
-              leftIcon={
-                <Img
-                  src="images/img_icon_20px_google.svg"
-                  alt="icon / 20px / google"
-                />
-              }
-              className="w-full gap-2.5 sm:px-5 text-gray-900 font-bold border-gray-600_02 border border-solid"
-            >
-              Log in with Google
-            </Button>
+            <p className="!text-red-400 my-5 font-bold">
+              Print error message here. Print error message here.
+            </p>
           </div>
           <div className="h-px w-full bg-blue_gray-100_01" />
           <div className="flex flex-row sm:flex-col justify-center w-full gap-2 sm:gap-2">

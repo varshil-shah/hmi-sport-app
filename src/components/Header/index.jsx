@@ -43,7 +43,9 @@ export default function Header({ ...props }) {
               <Heading as="h6">Sports</Heading>
             </div>
             <div className="flex flex-row justify-start items-start w-[25%] gap-1.5">
-              <Heading as="h6">Organisers</Heading>
+              <Heading as="h6">
+                <Link to="/analytics">Analytics</Link>
+              </Heading>
             </div>
           </div>
         </div>

@@ -1,14 +1,33 @@
-import React, { useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Heading, Button, Img, CheckBox, Input } from "../../components";
 import { default as ModalProvider } from "react-modal";
-// import supabase from "config/supabase";
+import supabase from "config/supabase";
+import { useLoginRegisterModal } from "context/loginRegisterModalContext";
+import { useUser } from "context/userContext";
 
 export default function LogIn({ isOpen, onClose, onOpen, ...props }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const emailRef = useRef();
+  const passwordRef = useRef();
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const { closeLoginModal } = useLoginRegisterModal();
+  const { handleLogin } = useUser();
 
-  // console.log(supabase.auth.session());
+  // const handleLogin = async (e) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+  //   const { data, error } = await supabase.auth.signInWithPassword({
+  //     email: emailRef.current.value,
+  //     password: passwordRef.current.value,
+  //   });
+  //   if (error) {
+  //     setError(error.message);
+  //   } else {
+  //     alert("Logged in successfully");
+  //   }
+  //   setLoading(false);
+  //   closeLoginModal();
+  // };
 
   return (
     <ModalProvider
@@ -17,7 +36,14 @@ export default function LogIn({ isOpen, onClose, onOpen, ...props }) {
       isOpen={isOpen}
       className="min-w-[480px]"
     >
-      <div className="flex flex-col items-center justify-center w-full p-[29px] sm:p-5 border-blue_gray-100_01 border border-solid bg-white-A700 rounded-[10px]">
+      <form
+        className="flex flex-col items-center justify-center w-full p-[29px] sm:p-5 border-blue_gray-100_01 border border-solid bg-white-A700 rounded-[10px]"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleLogin(emailRef.current.value, passwordRef.current.value);
+          closeLoginModal();
+        }}
+      >
         <div className="flex flex-col items-center justify-start w-full gap-[29px] my-[9px]">
           <div className="flex flex-col items-center justify-start w-full gap-[13px]">
             <div className="flex flex-row justify-center w-full pt-[5px]">
@@ -40,8 +66,7 @@ export default function LogIn({ isOpen, onClose, onOpen, ...props }) {
                   type="email"
                   name="email"
                   placeholder="user / email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  ref={emailRef}
                   prefix={
                     <Img
                       src="images/img_icon_24px_user.svg"
@@ -55,8 +80,7 @@ export default function LogIn({ isOpen, onClose, onOpen, ...props }) {
                   type="password"
                   name="password"
                   placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  ref={passwordRef}
                   prefix={
                     <Img
                       src="images/img_icon_20px_lock.svg"
@@ -94,11 +118,9 @@ export default function LogIn({ isOpen, onClose, onOpen, ...props }) {
               shape="round"
               className="w-full sm:px-5 font-bold"
             >
-              Log in
+              {loading ? "Loading..." : "Log in"}
             </Button>
-            <p className="!text-red-400 my-5 font-bold">
-              Print error message here. Print error message here.
-            </p>
+            {error && <p className="!text-red-400 my-5 font-bold">{error}</p>}
           </div>
           <div className="h-px w-full bg-blue_gray-100_01" />
           <div className="flex flex-row sm:flex-col justify-center w-full gap-2 sm:gap-2">
@@ -118,7 +140,7 @@ export default function LogIn({ isOpen, onClose, onOpen, ...props }) {
             </a>
           </div>
         </div>
-      </div>
+      </form>
     </ModalProvider>
   );
 }

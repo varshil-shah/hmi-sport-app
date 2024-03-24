@@ -3,15 +3,18 @@ import Routes from "./Routes";
 import { BrowserRouter as Router } from "react-router-dom";
 import ScrollToTop from "components/ScrollToTop/ScrollToTop";
 import { LoginRegisterModalProvider } from "context/loginRegisterModalContext";
+import { UserProvider } from "context/userContext";
 
 function App() {
   return (
     <Router>
-      <LoginRegisterModalProvider>
-        <ScrollToTop>
-          <Routes />
-        </ScrollToTop>
-      </LoginRegisterModalProvider>
+      <UserProvider>
+        <LoginRegisterModalProvider>
+          <ScrollToTop>
+            <Routes />
+          </ScrollToTop>
+        </LoginRegisterModalProvider>
+      </UserProvider>
     </Router>
   );
 }

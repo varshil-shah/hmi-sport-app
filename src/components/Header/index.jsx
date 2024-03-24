@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { CloseSVG } from "../../assets/images";
 import { Button, Input, Img, Heading, Text } from "./..";
 import { Link } from "react-router-dom";
 import LogIn from "modals/LogIn";
 import CreateAccount from "modals/CreateAccount";
 import { useLoginRegisterModal } from "context/loginRegisterModalContext";
+import supabase from "config/supabase";
+import { useUser } from "context/userContext";
 
 export default function Header({ ...props }) {
   const loginRegisterContext = useLoginRegisterModal();
   const [searchBarValue1, setSearchBarValue1] = React.useState("");
+  const { user, handleLogout } = useUser();
 
   return (
     <header {...props}>
@@ -42,11 +45,20 @@ export default function Header({ ...props }) {
             <div className="flex flex-row justify-start items-start w-[25%] gap-1.5">
               <Heading as="h6">Sports</Heading>
             </div>
-            <div className="flex flex-row justify-start items-start w-[25%] gap-1.5">
-              <Heading as="h6">
-                <Link to="/analytics">Analytics</Link>
-              </Heading>
-            </div>
+            {user && (
+              <div className="flex flex-row justify-start items-start w-[25%] gap-1.5">
+                <Heading as="h6">
+                  <Link to="/analytics">Analytics</Link>
+                </Heading>
+              </div>
+            )}
+            {user && (
+              <div className="flex flex-row justify-start items-start w-[25%] gap-1.5">
+                <Heading as="h6">
+                  <Link to="/profile">Profile</Link>
+                </Heading>
+              </div>
+            )}
           </div>
         </div>
         <div className="flex flex-row justify-start items-center w-[19%] md:w-full gap-2.5">
@@ -76,14 +88,26 @@ export default function Header({ ...props }) {
             }
             className="w-[55%] gap-2 text-gray-900 font-bold"
           />
-          <Button
-            size="lg"
-            shape="round"
-            className="sm:px-5 font-semibold min-w-[94px]"
-            onClick={loginRegisterContext.openLoginModal}
-          >
-            Log in
-          </Button>
+          {user && (
+            <Button
+              size="lg"
+              shape="round"
+              className="sm:px-5 font-semibold min-w-[94px]"
+              onClick={handleLogout}
+            >
+              Logout
+            </Button>
+          )}
+          {!user && (
+            <Button
+              size="lg"
+              shape="round"
+              className="sm:px-5 font-semibold min-w-[94px]"
+              onClick={loginRegisterContext.openLoginModal}
+            >
+              Log in
+            </Button>
+          )}
         </div>
       </div>
 

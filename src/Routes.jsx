@@ -16,6 +16,7 @@ import PrivacyPolicy from "pages/PrivacyPolicy";
 import Analytics from "pages/Analytics";
 import Sports from "pages/Sports";
 import Events from "pages/Events";
+import CreateEvent from "pages/Events/CreateEvent";
 
 const ProjectRoutes = () => {
   let element = useRoutes([
@@ -34,44 +35,8 @@ const ProjectRoutes = () => {
       element: <ListingMapView />,
     },
     {
-      path: "listingmapview",
-      element: <ListingMapView />,
-    },
-    {
       path: "propertydetails",
       element: <PropertyDetails />,
-    },
-    {
-      path: "agentlist",
-      element: <AgentList />,
-    },
-    {
-      path: "agentprofile",
-      element: <AgentProfile />,
-    },
-    {
-      path: "contactpage",
-      element: <ContactPage />,
-    },
-    {
-      path: "blogpage",
-      element: <BlogPage />,
-    },
-    {
-      path: "blogdetails",
-      element: <BlogDetails />,
-    },
-    {
-      path: "error",
-      element: <Error />,
-    },
-    {
-      path: "faq",
-      element: <FAQ />,
-    },
-    {
-      path: "privacypolicy",
-      element: <PrivacyPolicy />,
     },
     {
       path: "analytics",
@@ -84,6 +49,10 @@ const ProjectRoutes = () => {
     {
       path: "events",
       element: <Events />,
+    },
+    {
+      path: "createevent",
+      element: <CreateEvent />,
     },
   ]);
 

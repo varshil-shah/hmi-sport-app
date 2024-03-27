@@ -43,12 +43,21 @@ export default function Header({ ...props }) {
               </Heading>
             </div>
             <div className="flex flex-row justify-start items-start w-[25%] gap-1.5">
-              <Heading as="h6">Sports</Heading>
+              <Heading as="h6">
+                <Link to="/sports">Sports</Link>
+              </Heading>
             </div>
             {user && (
               <div className="flex flex-row justify-start items-start w-[25%] gap-1.5">
                 <Heading as="h6">
                   <Link to="/analytics">Analytics</Link>
+                </Heading>
+              </div>
+            )}
+            {user && (
+              <div className="flex flex-row justify-start items-start w-[25%] gap-1.5">
+                <Heading as="h6">
+                  <Link to="/events">Events</Link>
                 </Heading>
               </div>
             )}
@@ -62,32 +71,6 @@ export default function Header({ ...props }) {
           </div>
         </div>
         <div className="flex flex-row justify-start items-center w-[19%] md:w-full gap-2.5">
-          <Input
-            size="xs"
-            shape="square"
-            name="search"
-            placeholder="Search"
-            value={searchBarValue1}
-            onChange={(e) => setSearchBarValue1(e)}
-            prefix={
-              <Img
-                src="images/img_icon_24px_search.svg"
-                alt="icon / 24px / search"
-                className="cursor-pointer"
-              />
-            }
-            suffix={
-              searchBarValue1?.length > 0 ? (
-                <CloseSVG
-                  onClick={() => setSearchBarValue1("")}
-                  height={24}
-                  width={24}
-                  fillColor="#191919ff"
-                />
-              ) : null
-            }
-            className="w-[55%] gap-2 text-gray-900 font-bold"
-          />
           {user && (
             <Button
               size="lg"

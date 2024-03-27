@@ -1,7 +1,6 @@
 import React from "react";
 import { useRoutes } from "react-router-dom";
 import Home from "pages/Home";
-import NotFound from "pages/NotFound";
 import LandingPage from "pages/LandingPage";
 import AboutUs from "pages/AboutUs";
 import ListingMapView from "pages/ListingMapView";
@@ -15,6 +14,8 @@ import Error from "pages/Error";
 import FAQ from "pages/FAQ";
 import PrivacyPolicy from "pages/PrivacyPolicy";
 import Analytics from "pages/Analytics";
+import Sports from "pages/Sports";
+import Events from "pages/Events";
 
 const ProjectRoutes = () => {
   let element = useRoutes([
@@ -75,6 +76,14 @@ const ProjectRoutes = () => {
     {
       path: "analytics",
       element: <Analytics />,
+    },
+    {
+      path: "sports",
+      element: <Sports />,
+    },
+    {
+      path: "events",
+      element: <Events />,
     },
   ]);
 

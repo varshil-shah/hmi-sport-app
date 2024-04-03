@@ -29,14 +29,16 @@ const SelectBox = React.forwardRef(
       color = "white_A700",
       ...restProps
     },
-    ref,
+    ref
   ) => {
     return (
       <>
         <Select
           ref={ref}
           options={options}
-          className={`${className} flex ${(shape && shapes[shape]) || ""} ${(size && sizes[size]) || ""} ${(variant && variants[variant]?.[color]) || ""}`}
+          className={`${className} flex ${(shape && shapes[shape]) || ""} ${
+            (size && sizes[size]) || ""
+          } ${(variant && variants[variant]?.[color]) || ""}`}
           isSearchable={isSearchable}
           isMulti={isMulti}
           components={{
@@ -91,7 +93,7 @@ const SelectBox = React.forwardRef(
         {children}
       </>
     );
-  },
+  }
 );
 
 SelectBox.propTypes = {

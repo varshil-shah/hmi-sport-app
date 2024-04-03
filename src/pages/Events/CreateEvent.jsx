@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Helmet } from "react-helmet";
 import {
   Img,
@@ -12,6 +12,8 @@ import {
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
+import { useSport } from "../../context/sportContext";
+
 const sportsOptions = [
   { value: "badminton", label: "Badminton" },
   { value: "cricket", label: "Cricket" },
@@ -20,19 +22,87 @@ const sportsOptions = [
   { value: "tableTennis", label: "Table Tennis" },
 ];
 
+const Select = ({ options, value, onChange, title = "" }) => {
+  return (
+    <select
+      className="block appearance-none w-full bg-white border-blue_gray-100_01 border border-solid px-4 py-3 pr-8 rounded-md"
+      value={value}
+      onChange={onChange}
+    >
+      <option value="">Select {title}</option>
+      {options.map((option) => (
+        <option key={option.value} value={option.value}>
+          {option.label}
+        </option>
+      ))}
+    </select>
+  );
+};
+
 export default function CreateEvent() {
   const nameRef = useRef(null);
   const locationRef = useRef(null);
   const dateRef = useRef(null);
   const timeRef = useRef(null);
   const descriptionRef = useRef(null);
-  const imageRef = useRef(null);
-  const sportRef = useRef(null);
-  const parkingRef = useRef(null);
   const teamSizeRef = useRef(null);
-  const foodRef = useRef(null);
-  const sportsTypeRef = useRef(null);
   const priceRef = useRef(null);
+
+  const [images, setImages] = useState([]);
+  const [parking, setParking] = useState("");
+  const [sport, setSport] = useState("");
+  const [food, setFood] = useState("");
+  const [sportType, setSportType] = useState("");
+
+  const { createSport } = useSport();
+
+  const handleUpload = (e) => {
+    const files = e.target.files;
+    const images = Array.from(files).map((file) => ({
+      imageName: file.name,
+      imageUrl: URL.createObjectURL(file),
+    }));
+    setImages(images);
+    console.log(images);
+  };
+
+  function handleCreateEvent() {
+    const newSport = {
+      name: nameRef.current.value,
+      location: locationRef.current.value,
+      date: dateRef.current.value,
+      time: timeRef.current.value,
+      images: images,
+      description: descriptionRef.current.value,
+      sport: sport,
+      parking: parking,
+      teamSize: teamSizeRef.current.value,
+      food: food,
+      sportsType: sportType,
+      price: priceRef.current.value,
+    };
+
+    console.log(newSport);
+
+    createSport(newSport);
+
+    // reset all values
+    nameRef.current.value = "";
+    locationRef.current.value = "";
+    dateRef.current.value = "";
+    timeRef.current.value = "";
+    descriptionRef.current.value = "";
+    teamSizeRef.current.value = "";
+    priceRef.current.value = "";
+
+    setImages([]);
+    setSport("");
+    setFood("");
+    setParking("");
+    setSportType("");
+  }
+
+  async function uploadImages() {}
 
   return (
     <>
@@ -113,6 +183,7 @@ export default function CreateEvent() {
                     size="2xl"
                     shape="round"
                     className="w-full sm:px-5 font-semibold"
+                    onClick={handleCreateEvent}
                   >
                     Create event
                   </Button>
@@ -123,34 +194,29 @@ export default function CreateEvent() {
                 <div className="flex flex-col w-[44%] md:w-full ml-[25px] gap-10 sm:ml-5">
                   <div className="flex flex-col w-full pt-[3px] gap-[19px]">
                     <div className="flex flex-col w-full gap-3 mt-12">
-                      <Input
+                      <input
                         shape="round"
                         type="file"
                         name="images"
                         placeholder="Select images"
-                        className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
-                        ref={imageRef}
+                        className="block appearance-none w-full bg-white border-blue_gray-100_01 border border-solid px-4 py-3 pr-8 rounded-md"
+                        onChange={handleUpload}
+                        multiple
                       />
-                      <SelectBox
-                        shape="round"
-                        type="text"
-                        name=""
-                        placeholder="Select Sport"
+                      <Select
                         options={sportsOptions}
-                        className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
-                        ref={sportRef}
-                      ></SelectBox>
-                      <SelectBox
-                        shape="round"
-                        type="text"
-                        name="parking"
-                        placeholder="Parking"
+                        title="sport"
+                        value={sport}
+                        onChange={(e) => setSport(e.target.value)}
+                      />
+                      <Select
                         options={[
                           { value: "available", label: "Available" },
                           { value: "unavilable", label: "Unavailable" },
                         ]}
-                        className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
-                        ref={parkingRef}
+                        title="parking"
+                        value={parking}
+                        onChange={(e) => setParking(e.target.value)}
                       />
                       <Input
                         shape="round"
@@ -160,33 +226,26 @@ export default function CreateEvent() {
                         className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
                         ref={teamSizeRef}
                       />
-                      <SelectBox
-                        shape="round"
-                        type="text"
-                        name="food"
-                        placeholder="Food Available"
+                      <Select
                         options={[
                           { label: "none", value: "None" },
                           { label: "jain", value: "Jain" },
                           { label: "veg", value: "Vegetarian" },
                           { label: "non-veg", value: "Non-Vegetarian" },
                         ]}
-                        className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
-                        ref={foodRef}
+                        title="food"
+                        value={food}
+                        onChange={(e) => setFood(e.target.value)}
                       />
-                      <SelectBox
-                        shape="round"
-                        type="number"
-                        name="sportsType"
-                        placeholder="Sport Type"
+                      <Select
                         options={[
                           { label: "indoor", value: "Indoor" },
                           { label: "outdoor", value: "Outdoor" },
                         ]}
-                        className="w-full gap-3.5 font-semibold border-blue_gray-100_01 border border-solid"
-                        ref={sportsTypeRef}
+                        title="sport type"
+                        value={sportType}
+                        onChange={(e) => setSportType(e.target.value)}
                       />
-
                       <Input
                         shape="round"
                         type="number"

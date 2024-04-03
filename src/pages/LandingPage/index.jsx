@@ -32,8 +32,8 @@ export default function LandingPage() {
                   </>
                 </Heading>
                 <Text size="lg" as="p" className="!text-gray-700 mb-3">
-                  We help businesses customize, automate, and scale up their ad
-                  production and delivery.
+                  Unleash Your Athletic Potential: Stay Ahead with the Latest
+                  Sports News & Updates!
                 </Text>
               </div>
               <div className="flex flex-col justify-center items-center md:items-start w-full p-6 sm:p-5 bg-white-A700 rounded-[16px]">
@@ -54,7 +54,7 @@ export default function LandingPage() {
                     <Input
                       shape="round"
                       name="icon20pxupdowna"
-                      placeholder="Property Type"
+                      placeholder="Range"
                       suffix={
                         <Img
                           src="images/img_icon_20px_updown_arrow.svg"

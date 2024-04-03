@@ -12,6 +12,7 @@ import {
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import LandingPageCard from "../../components/LandingPageCard";
+import { useSport } from "context/sportContext";
 
 const dropDownOptions = [
   { label: "Option1", value: "option1" },
@@ -32,8 +33,26 @@ const teamOptions = [
   { label: "team", value: "team" },
 ];
 
+const months = {
+  0: "Jan",
+  1: "Feb",
+  2: "Mar",
+  3: "Apr",
+  4: "May",
+  5: "Jun",
+  6: "Jul",
+  7: "Aug",
+  8: "Sep",
+  9: "Oct",
+  10: "Nov",
+  11: "Dec",
+};
+
 export default function ListingMapViewPage() {
   const [searchBarValue8, setSearchBarValue8] = React.useState("");
+  const { sports } = useSport();
+
+  console.log(sports);
 
   return (
     <>
@@ -204,15 +223,23 @@ export default function ListingMapViewPage() {
               <GoogleMap showMarker={false} className="h-[428px] w-full" />
               <div className="flex flex-col items-center justify-start w-full">
                 <div className="justify-center w-full gap-6 grid-cols-3 md:grid-cols-2 md:gap-5 sm:grid-cols-1 grid">
-                  <LandingPageCard
-                    className="flex flex-col items-center justify-start w-full"
-                    banner="https://images.pexels.com/photos/8007094/pexels-photo-8007094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    location="APJ kalam badminton court, Mumbai"
-                    date="10th June 2021"
-                    teamSize="2"
-                    sportName="Badminton"
-                    sportType="Indoor"
-                  />
+                  {sports.map((sport) => {
+                    const date = new Date(sport.date).getDate();
+                    const year = new Date(sport.date).getFullYear();
+                    const month = new Date(sport.date).getMonth();
+
+                    return (
+                      <LandingPageCard
+                        className="flex flex-col items-center justify-start w-full"
+                        banner={sport.images[0].imageUrl}
+                        location={sport.location}
+                        date={`${date} ${months[month]} ${year}`}
+                        teamSize={sport.teamSize}
+                        sportName={sport.sport}
+                        sportType={sport.sportsType}
+                      />
+                    );
+                  })}
                   <LandingPageCard
                     banner="https://images.pexels.com/photos/3628912/pexels-photo-3628912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                     className="flex flex-col items-center justify-start w-full"

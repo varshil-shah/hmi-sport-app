@@ -27,7 +27,7 @@ function Analytics() {
     datasets: [
       {
         label: "Revenue",
-        data: [100, 200, 300, 400, 500, 600],
+        data: [100, 50, 150, 300, 200, 600],
         fill: false,
         backgroundColor: "rgb(255, 99, 132)",
         borderColor: "rgba(255, 99, 132, 0.2)",

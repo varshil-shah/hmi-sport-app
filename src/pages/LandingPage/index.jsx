@@ -1,10 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Heading, Img, Text, Button, Input } from "../../components";
 import Header from "../../components/Header";
 import LandingPageCard from "../../components/LandingPageCard";
 
 export default function LandingPage() {
+  const navigate = useNavigate();
+
   return (
     <>
       <Helmet>
@@ -80,6 +83,7 @@ export default function LandingPage() {
                     size="4xl"
                     shape="round"
                     className="w-full sm:px-5 font-bold"
+                    onClick={() => navigate("/listing")}
                   >
                     Search
                   </Button>
